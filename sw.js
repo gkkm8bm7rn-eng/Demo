@@ -8,27 +8,27 @@ const RESOURCES=[
     "key": "index.html"
   },
   {
-    "url": "storefront.css?v=20261026-sdm-demo-static-v2",
+    "url": "storefront.css?v=20261026-sdm-brand-v1",
     "sha256": "af0a7b8d7a3383f9444cdf5d086ba05ecdf99328c50b548949b11c8024b2cd5c"
   },
   {
-    "url": "media-policy.js?v=20261026-sdm-demo-static-v2",
+    "url": "media-policy.js?v=20261026-sdm-brand-v1",
     "sha256": "1086708a64ac375f71ca0bf293f8881ec1a6b3e4d3364962d6f28060a6e4b954"
   },
   {
-    "url": "variants.js?v=20261026-sdm-demo-static-v2",
+    "url": "variants.js?v=20261026-sdm-brand-v1",
     "sha256": "fa024d44bfa9aab83917e5e7169b4e7197d83210b69caee96960e8e1fd9f4f33"
   },
   {
-    "url": "app.js?v=20261026-sdm-demo-static-v2",
+    "url": "app.js?v=20261026-sdm-brand-v1",
     "sha256": "c948ef7dc2b9d7b8e07ead0ca965b1d07de886e2875995d969766b1bfc2be74b"
   },
   {
-    "url": "search-fallback.js?v=20261026-sdm-demo-static-v2",
+    "url": "search-fallback.js?v=20261026-sdm-brand-v1",
     "sha256": "e26e7d15b396c483c1ff96cad9e452cf5533b3859912895d0a04fe8a26f78d69"
   },
   {
-    "url": "cart-feedback.js?v=20261026-sdm-demo-static-v2",
+    "url": "cart-feedback.js?v=20261026-sdm-brand-v1",
     "sha256": "96cca302ce14b13c77186a703f534b6e01a32b124a3ec24d72004b9001b35f3b"
   }
 ];
