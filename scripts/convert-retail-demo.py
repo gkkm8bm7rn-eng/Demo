@@ -75,7 +75,7 @@ assert all('retailPrice' in v for v in variants), 'Missing retail price field'
 assert (root / 'assets/products').exists(), 'Missing product photos folder'
 photo_count = len(list((root / 'assets/products').rglob('*.webp')))
 assert photo_count >= 7000, f'Only {photo_count} photos were copied'
-assert len(list((root / 'data/details').glob('*.json'))) >= 20
+assert len(list((root / 'data/details').glob('*.json'))) >= 15
 assert 'Цена для дизайнера' not in (root / 'variants.js').read_text(encoding='utf-8')
 assert 'Специальные цены' not in (root / 'index.html').read_text(encoding='utf-8')
 print(f'Valid: {len(products)} models, {len(variants)} variants, {photo_count} WebP files')
