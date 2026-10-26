@@ -1,0 +1,58 @@
+name: Import FORMA HOME retail demo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/import-retail-demo.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout independent demo repository
+        uses: actions/checkout@v4
+        with:
+          path: demo
+          fetch-depth: 1
+
+      - name: Checkout public designer source without write permissions
+        uses: actions/checkout@v4
+        with:
+          repository: gkkm8bm7rn-eng/forma-designer-private
+          ref: ae4ee139978134d68c53083126571cf793d6a343
+          path: original
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Copy all catalog files, photographs, and layout
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Source CI jobs do not belong in the independent demo.
+          rsync -a --exclude='.git/' --exclude='.github/workflows/' original/ demo/
+          python3 demo/scripts/convert-retail-demo.py
+          cd demo
+          git diff --check
+          echo "Copied paths:"
+          find assets -type f | wc -l
+
+      - name: Commit the checked retail-only copy to Demo
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd demo
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add --all
+          if git diff --cached --quiet; then
+            echo "Already up to date"
+          else
+            git commit -m "Copy complete designer storefront with retail-only prices"
+            git push origin HEAD:main
+          fi
