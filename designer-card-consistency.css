@@ -1,0 +1,60 @@
+/* FORMA HOME Design Private — approved "Pearl Linen" + card harmonization.
+   Preview only: pure-white image stages and equal-bottom purchase controls.
+   No photo changes, no fixed card heights, no font changes, no catalog JS. */
+
+/* Photographs keep their real pixel colors and original contain scaling.
+   Only the space AROUND non-square or transparent photos becomes clean white,
+   eliminating the beige bands seen in the attached iPhone screenshot. */
+html body .product-card .product-visual,
+html body .product-card .product-image-stage,
+html body .product-card .product-image-stage img,
+html body .recent-card .recent-image,
+html body .recent-card .recent-image img {
+  background-color:#FFFFFF!important;
+}
+
+/* Keep the loading-only overlay neutral as well.
+   The ::after layer is normally invisible and shown only while an image waits. */
+html body .product-card .product-image-stage::after {
+  background:linear-gradient(135deg,
+    rgba(255,255,255,.94),rgba(250,250,250,.94))!important;
+}
+
+/* Each grid cell already stretches to the tallest product in its row.
+   Its info pane MUST also be a vertical flexbox for margin-top:auto to work.
+   Long names, category labels, specifications, and color options may grow
+   naturally; they never overlap the price or the purchase button. */
+html body .product-card .product-info {
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:stretch!important;
+  flex:1 1 auto!important;
+  min-width:0!important;
+}
+
+/* Pin the ENTIRE price-and-purchase block to the bottom of the info pane.
+   Padding preserves a minimum gap above prices even in crowded cards. */
+html body .product-card .product-bottom {
+  margin-top:auto!important;
+  padding-top:11px!important;
+  flex-shrink:0!important;
+  min-width:0!important;
+}
+
+/* Mobile/tablet use the approved stacked price and action layout.
+   Retain the existing touch-friendly purchase button dimensions. */
+@media(max-width:900px){
+  html body .product-card .product-bottom {
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    align-content:end!important;
+    gap:8px!important;
+  }
+  html body .product-card .quick-add {
+    width:100%!important;
+  }
+}
+
+/* Once a product is added, the existing quantity control replaces the
+   purchase action inside the same anchored bottom area; do not alter
+   quantities, cart feedback, button visibility or active selections. */

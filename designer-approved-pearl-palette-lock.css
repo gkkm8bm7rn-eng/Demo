@@ -1,0 +1,199 @@
+/* FORMA HOME Design Private — APPROVED "Pearl Linen" color lock.
+ * References the exact approved palette from
+ * preview/designer-pearl-linen-graphite-20261014.
+ * This last layer suppresses residual sand/champagne/blue fills from
+ * superseded previews. It does NOT alter font weights, product data,
+ * images, grid structure, variant selection, cart or button geometry.
+ *
+ * Approved palette:
+ * pearl        #F0EDE9
+ * linen        #E7E2DC
+ * porcelain    #E8E9E7
+ * milkstone    #F4F0EB
+ * taupe        #DDD8D2
+ * graphite     #3D4246
+ */
+:root {
+  --forma-pearl:#F0EDE9;
+  --forma-linen:#E7E2DC;
+  --forma-porcelain:#E8E9E7;
+  --forma-milkstone:#F4F0EB;
+  --forma-taupe:#DDD8D2;
+  --forma-graphite:#3D4246;
+  --forma-soft-line:#DDD7D0;
+  --ink:#3D4246;
+  --paper:#F0EDE9;
+  --muted:#686B6C;
+  --line:#DDD7D0;
+  --green:#3D4246;
+  --green-dark:#30363A;
+  --accent:#3D4246;
+  --accent-dark:#30363A;
+  --sage:#E7E2DC;
+  --sage-deep:#DDD8D2;
+  --forma-mist-surface:#E8E9E7;
+  --forma-champagne-surface:#E7E2DC;
+  --forma-milk-surface:#F4F0EB;
+  --forma-palette-line:#DDD7D0;
+  --forma-palette-ink:#3D4246;
+}
+
+/* The ORIGINAL family of pearl/linen/porcelain tones only.
+   Alternating light neutral areas run the full document height.
+   No peach, sand or golden wash; no animation or fixed background. */
+html body {
+  background-color:var(--forma-pearl)!important;
+  background-image:
+    radial-gradient(ellipse 104% 25% at -5% 8%,
+      rgba(231,226,220,.53) 0%,rgba(231,226,220,.19) 45%,transparent 83%),
+    radial-gradient(ellipse 90% 22% at 100% 23%,
+      rgba(232,233,231,.76) 0%,rgba(232,233,231,.22) 47%,transparent 84%),
+    radial-gradient(ellipse 110% 25% at -6% 39%,
+      rgba(221,216,210,.32) 0%,rgba(231,226,220,.16) 45%,transparent 83%),
+    radial-gradient(ellipse 88% 23% at 102% 53%,
+      rgba(232,233,231,.67) 0%,rgba(232,233,231,.20) 47%,transparent 83%),
+    radial-gradient(ellipse 105% 26% at -6% 67%,
+      rgba(231,226,220,.50) 0%,rgba(231,226,220,.17) 44%,transparent 82%),
+    radial-gradient(ellipse 91% 23% at 100% 83%,
+      rgba(232,233,231,.70) 0%,rgba(232,233,231,.18) 45%,transparent 82%),
+    radial-gradient(ellipse 108% 22% at 2% 96%,
+      rgba(231,226,220,.46) 0%,rgba(231,226,220,.17) 45%,transparent 82%),
+    linear-gradient(180deg,
+      #F0EDE9 0%,#E8E9E7 20%,#E7E2DC 36%,
+      #F0EDE9 52%,#E8E9E7 70%,#E7E2DC 84%,#F0EDE9 100%)!important;
+  background-size:100% 100%!important;
+  background-repeat:no-repeat!important;
+  background-attachment:scroll!important;
+  color:var(--forma-graphite)!important;
+}
+
+/* The approved restrained pearl/linen banner; no yellow-pink edges. */
+html body main#top>.hero .hero-content {
+  background:linear-gradient(110deg,
+    #E8E9E7 0%,#F0EDE9 52%,#E7E2DC 100%)!important;
+  border-color:#DDD7D0!important;
+}
+
+/* Header/control surfaces receive the same neutral colors. Keep the
+   original brand lettering, red favorites and all icon artwork. */
+html body .site-header {
+  background:rgba(240,237,233,.97)!important;
+  border-color:#DDD7D0!important;
+}
+html body .site-header .favorites-button,
+html body .site-header .cart-button,
+html body .site-header .question-button,
+html body .site-header .delivery-button,
+html body .site-header .delivery-payment-button {
+  background:var(--forma-milkstone)!important;
+  border-color:#DDD7D0!important;
+  color:var(--forma-graphite)!important;
+}
+html body .site-header .favorites-button:hover,
+html body .site-header .cart-button:hover,
+html body .site-header .question-button:hover,
+html body .site-header .delivery-button:hover,
+html body .site-header .delivery-payment-button:hover {
+  background:#E8E9E7!important;
+  border-color:#D3D0CB!important;
+}
+
+/* Category and subcategory navigation: milkstone, selected soft taupe. */
+html body .mobile-category-shell,
+html body .category-primary,
+html body .category-row,
+html body .mobile-category-trigger,
+html body .mobile-category-panel,
+html body .mobile-category-option,
+html body .category-main,
+html body .category-subgroup,
+html body .category-subgroup .category-chip {
+  background:var(--forma-milkstone)!important;
+  border-color:#DDD7D0!important;
+  color:var(--forma-graphite)!important;
+}
+html body .mobile-category-section.selected>.mobile-category-trigger,
+html body .mobile-category-section.open>.mobile-category-trigger,
+html body .mobile-category-section.open.selected>.mobile-category-trigger,
+html body .mobile-category-option.active,
+html body .category-main.active,
+html body .category-subgroup.active,
+html body .category-subgroup .category-chip.active,
+html body .category-chip.active,
+html body .category-chip[aria-pressed="true"] {
+  background:var(--forma-taupe)!important;
+  border-color:#CFC8C0!important;
+  color:var(--forma-graphite)!important;
+}
+html body .mobile-category-trigger:hover,
+html body .mobile-category-option:hover,
+html body .category-main:hover:not(.active),
+html body .category-subgroup .category-chip:hover:not(.active) {
+  background:#E8E9E7!important;
+}
+html body .mobile-category-hint,
+html body .mobile-category-trigger small,
+html body .mobile-category-option small {
+  background:var(--forma-porcelain)!important;
+  color:#616368!important;
+}
+html body .mobile-category-trigger>.mobile-category-icon,
+html body .mobile-category-section.selected>.mobile-category-trigger>.mobile-category-icon,
+html body .mobile-category-section.open>.mobile-category-trigger>.mobile-category-icon {
+  background-color:var(--forma-linen)!important;
+}
+
+/* Non-photo product areas stay milkstone, as in the approved concept.
+   DO NOT override .product-visual or .product-image-stage here: their
+   later-approved white photo padding is intentional and must remain. */
+html body .product-card,
+html body .recent-card,
+html body .product-card .product-info {
+  background:var(--forma-milkstone)!important;
+  border-color:#DDD7D0!important;
+}
+html body .product-card .product-categories .product-type:not(.product-new-badge),
+html body .product-card .product-categories .product-category-link,
+html body .product-type:not(.product-new-badge),
+html body .product-category-link,
+html body .designer-discount,
+html body .new-products-toggle:not(.active),
+html body .product-new-badge {
+  background:var(--forma-linen)!important;
+  border-color:#D7D0C8!important;
+  color:var(--forma-graphite)!important;
+}
+html body .search-field,
+html body .catalog-tools .search-field,
+html body .sort-field,
+html body .catalog-utility .sort-field,
+html body .filters,
+html body .favorites-toolbar {
+  background:var(--forma-milkstone)!important;
+  border-color:#DDD7D0!important;
+}
+
+/* Graphite remains EXACTLY #3D4246, as in the approved palette.
+   Do not introduce the unapproved experimental lighter #565C5E yet. */
+html body .search-submit,
+html body .filter-toggle,
+html body .quick-add,
+html body .product-card .quick-add,
+html body .primary-button,
+html body .detail-sticky-actions .primary-button,
+html body .recent-add,
+html body .recent-card .recent-add,
+html body .page-button.active,
+html body .pagination .page-button.active,
+html body .new-products-toggle.active {
+  background:var(--forma-graphite)!important;
+  border-color:var(--forma-graphite)!important;
+  color:var(--forma-milkstone)!important;
+}
+html body .product-name,
+html body .product-price,
+html body .detail-price,
+html body .product-card .product-name,
+html body .product-card .product-price {
+  color:var(--forma-graphite)!important;
+}

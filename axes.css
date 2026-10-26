@@ -1,0 +1,142 @@
+.dual-axes{display:grid;gap:13px;margin:14px 0}.axis-group{min-width:0}.axis-options{display:flex;flex-wrap:wrap;gap:9px}.axis-swatch{width:30px;height:30px;padding:0;background:var(--axis-color);border:3px solid #fff;box-shadow:0 0 0 1.5px #8d8a81;cursor:pointer}.axis-swatch.soft-axis{border-radius:50%}.axis-swatch.hard-axis{border-radius:5px}.axis-swatch.active{box-shadow:0 0 0 3px #435d41}.axis-swatch:disabled{opacity:.22;cursor:not-allowed;filter:grayscale(.45)}.product-card .dual-axes{gap:8px}.product-card .axis-swatch{width:24px;height:24px}.product-card .variant-label{margin-bottom:6px;font-size:11px}.product-card .variant-label span{color:#686760}.variant-text{min-height:28px;padding:4px 8px;border:1px solid #aaa69c;border-radius:8px;background:#fff;color:#35342f;font-size:10px;cursor:pointer}.variant-text.active{border:2px solid #435d41;padding:3px 7px}
+.dual-axes-compact{display:flex;align-items:center;gap:9px;max-width:100%;margin:11px 0 2px;overflow-x:auto;scrollbar-width:none}.dual-axes-compact::-webkit-scrollbar{display:none}.dual-axes-compact .axis-group{flex:none}.dual-axes-compact .axis-options{flex-wrap:nowrap;padding:2px}.dual-axes-compact .axis-swatch{flex:0 0 auto}.variant-choice-section{margin-top:18px}.variant-swatch-options{align-items:center;gap:10px}.variant-swatch-option{width:34px;height:34px;flex:0 0 34px;padding:0;border:3px solid #fff;border-radius:50%;outline:1px solid #cfcac0;background:var(--swatch);cursor:pointer}.variant-swatch-option.active{outline:3px solid #435d41}.variant-swatch-option:focus-visible,.card-swatch:focus-visible,.axis-swatch:focus-visible{outline:3px solid #435d41;outline-offset:2px}
+
+/* Category icons: isolated asset layer. The catalog logic still renders the same spans; only their artwork comes from four replaceable SVG files. */
+.category-main[data-main-category]:not([data-main-category="all"])>.category-icon,
+.mobile-category-trigger[data-mobile-category-toggle]>.mobile-category-icon{
+  font-size:0!important;
+  background-image:var(--forma-category-icon)!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  background-size:100% 100%!important;
+}
+.category-main[data-main-category="interior"]>.category-icon,
+.mobile-category-trigger[data-mobile-category-toggle="interior"]>.mobile-category-icon{--forma-category-icon:url("assets/ui/category-interior.svg")}
+.category-main[data-main-category="outdoor"]>.category-icon,
+.mobile-category-trigger[data-mobile-category-toggle="outdoor"]>.mobile-category-icon{--forma-category-icon:url("assets/ui/category-outdoor.svg")}
+.category-main[data-main-category="horeca"]>.category-icon,
+.mobile-category-trigger[data-mobile-category-toggle="horeca"]>.mobile-category-icon{--forma-category-icon:url("assets/ui/category-horeca.svg?v=20260906-3")}
+.category-main[data-main-category="office"]>.category-icon,
+.mobile-category-trigger[data-mobile-category-toggle="office"]>.mobile-category-icon{--forma-category-icon:url("assets/ui/category-office.svg?v=20260906-2")}
+
+/* Selected/open categories keep the same icon tile instead of being replaced by the active-state solid fill from later UI styles. */
+html body .mobile-category-section.open>.mobile-category-trigger>.mobile-category-icon,
+html body .mobile-category-section.selected>.mobile-category-trigger>.mobile-category-icon,
+html body .category-main.active[data-main-category]:not([data-main-category="all"])>.category-icon{
+  background-color:#eef1ea!important;
+  background-image:var(--forma-category-icon)!important;
+  background-position:center!important;
+  background-repeat:no-repeat!important;
+  background-size:100% 100%!important;
+  color:#435d41!important;
+}
+
+/* Mobile width guard: keep the catalog inside the physical viewport even when card content has long labels/prices. Presentation only. */
+@media(max-width:640px){
+  html,body,main#top,.catalog-section,.catalog-layout,.catalog-content,#productGrid{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+  }
+  /* Do not create nested overflow clip paint boundaries around the long
+     product grid: iOS WebKit can leave visually blank tiles after scrolling.
+     The minmax(0,1fr) columns and min-width guards above prevent horizontal
+     overflow without forcing additional clipping/compositing ancestors. */
+  #productGrid.product-grid{
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    box-sizing:border-box!important;
+  }
+  #productGrid>.product-card,
+  .product-card .product-info,
+  .product-card .product-bottom,
+  .product-card .price-stack,
+  .product-card .retail-row,
+  .product-card .product-categories,
+  .product-card .card-variants{
+    min-width:0!important;
+    max-width:100%!important;
+  }
+  .product-card .retail-row{flex-wrap:wrap!important}
+  .product-card .product-name,
+  .product-card .product-meta,
+  .product-card .product-type,
+  .product-card .quick-add{
+    max-width:100%!important;
+    overflow-wrap:anywhere!important;
+  }
+}
+
+/* Narrow mobile header: keep all four action controls fully inside the viewport. The full bilingual brand remains available through the link's aria-label; only the compact visible lockup is shortened on narrow screens. */
+@media(max-width:430px){
+  html body .site-header{padding-left:8px!important;padding-right:8px!important}
+  html body .site-header .brand-lockup{min-width:0!important;flex:none!important;margin-right:6px!important}
+  html body .site-header .brand-line{font-size:11px!important;line-height:1!important;letter-spacing:.055em!important;white-space:nowrap!important}
+  html body .site-header .brand-slash,
+  html body .site-header .brand-slash~span{display:none!important}
+  html body .site-header .header-actions{flex:none!important;gap:4px!important}
+  html body .site-header .question-button{width:42px!important;min-width:42px!important;height:42px!important;min-height:42px!important;border-radius:13px!important}
+  html body .site-header .question-button svg{width:22px!important;height:22px!important}
+  html body .site-header .delivery-payment-button{width:76px!important;min-width:76px!important;height:42px!important;min-height:42px!important;padding:0 6px!important;grid-template-columns:19px auto 19px!important;gap:4px!important;border-radius:13px!important}
+  html body .site-header .delivery-payment-icon{width:19px!important;height:19px!important}
+  html body .site-header .delivery-payment-slash{font-size:16px!important}
+  html body .site-header .favorites-button,
+  html body .site-header .cart-button{width:42px!important;min-width:42px!important;height:42px!important;min-height:42px!important}
+}
+
+/* At 320px the full mobile header was 9px too wide. Keep every action
+   and its 42px touch target; fit the existing compact wordmark instead of
+   clipping the scroll root or hiding the cart counter. */
+@media(max-width:359px){
+  html body .site-header{padding-left:6px!important;padding-right:6px!important}
+  html body .site-header .brand-lockup{margin-right:2px!important}
+  html body .site-header .brand-line{font-size:10px!important;letter-spacing:0!important}
+  html body .site-header .header-actions{gap:2px!important}
+}
+
+/* Desktop sort control: preserve dedicated room for the approved slider icon and chevron so neither overlaps the label. */
+@media(min-width:641px){
+  html body .catalog-utility .sort-field{padding-left:42px!important;padding-right:38px!important}
+}
+
+/* Desktop/tablet hero: keep the approved compact brand banner and remove the obsolete large slogan without touching mobile or catalog behavior. */
+@media(min-width:641px){
+  html body main#top{
+    grid-template-columns:minmax(0,1fr)!important;
+    grid-template-areas:"hero" "heading" "tools" "catalog" "recent"!important;
+    column-gap:0!important;
+    row-gap:0!important;
+    align-items:stretch!important;
+  }
+  html body main#top>.hero{
+    grid-area:hero!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0 0 14px!important;
+    padding:0!important;
+    align-self:stretch!important;
+  }
+  html body main#top>.hero .hero-content{
+    display:flex!important;
+    min-height:72px!important;
+    height:auto!important;
+    padding:18px 24px!important;
+    align-items:center!important;
+    justify-content:center!important;
+    border-radius:18px!important;
+    text-align:center!important;
+  }
+  html body main#top>.hero .hero-content::before{content:none!important}
+  html body main#top>.hero .eyebrow{
+    margin:0!important;
+    font-size:12px!important;
+    line-height:1.2!important;
+    letter-spacing:.16em!important;
+    text-align:center!important;
+  }
+  html body main#top>.hero h1{display:none!important}
+}
+@media(min-width:641px) and (max-width:900px){
+  html body main#top{padding-inline:18px!important}
+  html body main#top>.hero .hero-content{min-height:68px!important;padding:16px 18px!important;border-radius:17px!important}
+}

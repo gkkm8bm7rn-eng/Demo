@@ -1,0 +1,316 @@
+/* FORMA HOME Design Private — "Pearl Linen" visual-only preview.
+ * Pearl #F0EDE9 | linen #E7E2DC | porcelain mist #E8E9E7
+ * warm milkstone #F4F0EB | soft taupe #DDD8D2 | graphite #3D4246.
+ * Isolated CSS appended after existing designer preview styles.
+ * Keep approved regular typography, layout, photographs and catalogue logic.
+ */
+:root{
+  --forma-pearl:#F0EDE9;
+  --forma-linen:#E7E2DC;
+  --forma-porcelain:#E8E9E7;
+  --forma-milkstone:#F4F0EB;
+  --forma-taupe:#DDD8D2;
+  --forma-graphite:#3D4246;
+  --forma-soft-line:#DDD7D0;
+  --ink:#3D4246;
+  --muted:#686B6C;
+  --paper:#F0EDE9;
+  --line:#DDD7D0;
+  --accent:#3D4246;
+  --accent-dark:#30363A;
+  --green:#3D4246;
+  --green-dark:#30363A;
+  --sage:#E7E2DC;
+  --sage-deep:#DDD8D2;
+  --forma-mist-surface:#E8E9E7;
+  --forma-champagne-surface:#E7E2DC;
+  --forma-milk-surface:#F4F0EB;
+  --forma-palette-line:#DDD7D0;
+  --forma-palette-ink:#3D4246;
+}
+
+/* The gradient is attached to the entire document, not to a fixed overlay.
+   Broad pearl, light linen and porcelain fog areas alternate on scroll.
+   No animation, no fixed background, no backdrop blur. */
+html body{
+  color:var(--forma-graphite)!important;
+  background-color:var(--forma-pearl)!important;
+  background-image:
+    radial-gradient(ellipse 103% 25% at -6% 8%,
+      rgba(214,205,196,.51) 0%,rgba(231,226,220,.24) 44%,transparent 83%),
+    radial-gradient(ellipse 87% 23% at 101% 23%,
+      rgba(208,215,214,.41) 0%,rgba(232,234,231,.22) 43%,transparent 82%),
+    radial-gradient(ellipse 112% 26% at -6% 37%,
+      rgba(214,203,191,.41) 0%,rgba(233,225,215,.18) 47%,transparent 83%),
+    radial-gradient(ellipse 87% 22% at 102% 52%,
+      rgba(204,212,211,.39) 0%,rgba(234,235,232,.17) 45%,transparent 82%),
+    radial-gradient(ellipse 111% 26% at -6% 65%,
+      rgba(211,202,191,.42) 0%,rgba(231,225,216,.21) 46%,transparent 83%),
+    radial-gradient(ellipse 89% 23% at 101% 81%,
+      rgba(214,216,211,.36) 0%,rgba(236,235,229,.16) 44%,transparent 81%),
+    radial-gradient(ellipse 106% 22% at -4% 95%,
+      rgba(215,207,198,.39) 0%,rgba(234,229,222,.19) 47%,transparent 82%),
+    linear-gradient(180deg,
+      #F0EDE9 0%,#F2F0ED 19%,#E9E3DB 35%,
+      #E9ECE9 52%,#E8E2DA 73%,#F0EDE9 100%)!important;
+  background-size:100% 100%!important;
+  background-repeat:no-repeat!important;
+  background-attachment:scroll!important;
+}
+
+/* Header, wordmark: the existing Georgia letterforms and weights stay put. */
+html body .site-header{
+  background:rgba(241,238,234,.97)!important;
+  border-color:#DAD4CD!important;
+}
+html body .brand-line,
+html body .brand-line .brand-forma,
+html body .brand-line .brand-home,
+html body .brand-line .brand-slash{
+  color:var(--forma-graphite)!important;
+}
+html body .site-header .favorites-button,
+html body .site-header .cart-button{
+  background:var(--forma-milkstone)!important;
+  border-color:#DCD6CE!important;
+  color:var(--forma-graphite)!important;
+}
+
+/* Compact real-world promo banner. A quiet pearl-to-linen sweep. */
+html body main#top>.hero .hero-content{
+  background:linear-gradient(109deg,
+    #E4E5E1 0%,#F0ECE7 46%,#E5DED5 100%)!important;
+  border-color:#D8D2C9!important;
+}
+html body main#top>.hero h1{
+  color:var(--forma-graphite)!important;
+}
+
+/* Product cards are milkstone rather than pure white; photos and their
+   actual pixels are untouched. Avoid monochrome gray around empty images. */
+html body .product-card,
+html body .recent-card{
+  background:var(--forma-milkstone)!important;
+  border-color:#DDD7D0!important;
+  box-shadow:0 2px 12px rgba(64,61,58,.035)!important;
+}
+html body .product-card .product-visual,
+html body .product-card .product-image-stage,
+html body .recent-image,
+html body .recent-image img{
+  background:#EEEAE4!important;
+}
+
+/* Main categories remain nearly neutral; selection is soft taupe. */
+html body .category-row,
+html body .mobile-category-shell,
+html body .category-primary{
+  background:var(--forma-milkstone)!important;
+  border-color:var(--forma-soft-line)!important;
+}
+html body .mobile-category-section+.mobile-category-section{
+  border-color:#E1DCD5!important;
+}
+html body .mobile-category-trigger,
+html body .mobile-category-panel,
+html body .mobile-category-option,
+html body .category-main,
+html body .category-subgroup,
+html body .category-subgroup .category-chip{
+  background:var(--forma-milkstone)!important;
+  color:var(--forma-graphite)!important;
+  border-color:#E3DED7!important;
+}
+html body .mobile-category-section.selected>.mobile-category-trigger,
+html body .mobile-category-section.open>.mobile-category-trigger,
+html body .mobile-category-section.open.selected>.mobile-category-trigger,
+html body .mobile-category-option.active,
+html body .category-main.active,
+html body .category-subgroup.active,
+html body .category-subgroup .category-chip.active,
+html body .category-chip.active,
+html body .category-chip[aria-pressed="true"]{
+  background:var(--forma-taupe)!important;
+  color:var(--forma-graphite)!important;
+  border-color:#CFC8C0!important;
+}
+html body .mobile-category-trigger:hover,
+html body .mobile-category-trigger:focus-visible,
+html body .mobile-category-option:hover,
+html body .mobile-category-option:focus-visible,
+html body .category-subgroup .category-chip:hover:not(.active),
+html body .category-main:hover:not(.active){
+  background:#E9E6E1!important;
+  color:var(--forma-graphite)!important;
+}
+html body .mobile-category-hint{
+  background:#E8E9E7!important;
+  border-color:#D9DDDA!important;
+  color:#60686C!important;
+}
+html body .mobile-category-trigger small,
+html body .mobile-category-option small{
+  background:#E7E4DF!important;
+  color:#616368!important;
+}
+html body .mobile-category-section.selected>.mobile-category-trigger small,
+html body .mobile-category-section.open>.mobile-category-trigger small,
+html body .mobile-category-option.active small{
+  background:#F0EDE9!important;
+  color:#4C5256!important;
+}
+html body .mobile-category-trigger>.mobile-category-icon,
+html body .mobile-category-section.open>.mobile-category-trigger>.mobile-category-icon,
+html body .mobile-category-section.selected>.mobile-category-trigger>.mobile-category-icon,
+html body .category-main>.category-icon{
+  background-color:#E7E2DC!important;
+  color:var(--forma-graphite)!important;
+  filter:grayscale(1) contrast(1.1)!important;
+}
+
+/* Search/sort surfaces and secondary UI no longer use white/gray blocks. */
+html body .search-field,
+html body .catalog-tools .search-field,
+html body .sort-field,
+html body .catalog-utility .sort-field{
+  background:var(--forma-milkstone)!important;
+  border-color:#D9D3CC!important;
+}
+html body .search-field input,
+html body .sort-field select,
+html body .catalog-section>.section-heading h2,
+html body .product-name,
+html body .product-price,
+html body .detail-price,
+html body .recent-name,
+html body .cart-total,
+html body .cart-item strong{
+  color:var(--forma-graphite)!important;
+}
+html body .catalog-section>.section-heading .result-count,
+html body .product-meta,
+html body .price-kind,
+html body .retail-row,
+html body .product-card del{
+  color:#686B6C!important;
+}
+html body .product-type:not(.product-new-badge),
+html body .product-category-link,
+html body .new-products-toggle:not(.active),
+html body .product-new-badge{
+  background:#EAE6E0!important;
+  border-color:#D9D2CA!important;
+  color:#4E5457!important;
+}
+
+/* Solid graphite actions: no black, no glass or gradient on buttons.
+   Keep approved font sizes/weights and red favorites icons as-is. */
+html body .search-submit,
+html body .filter-toggle,
+html body .quick-add,
+html body .primary-button,
+html body .detail-sticky-actions .primary-button,
+html body .recent-add,
+html body .page-button.active,
+html body .pagination .page-button.active,
+html body .new-products-toggle.active{
+  background:var(--forma-graphite)!important;
+  border-color:var(--forma-graphite)!important;
+  color:#F4F0EB!important;
+  box-shadow:none!important;
+}
+html body .search-submit:hover,
+html body .filter-toggle:hover,
+html body .quick-add:hover,
+html body .primary-button:hover,
+html body .detail-sticky-actions .primary-button:hover,
+html body .recent-add:hover{
+  background:#30363A!important;
+  border-color:#30363A!important;
+}
+html body .card-cart-quantity span,
+html body .detail-cart-feedback-status{
+  background:var(--forma-graphite)!important;
+  color:#F4F0EB!important;
+}
+html body .card-cart-quantity button,
+html body .detail-cart-feedback button{
+  border-color:#D9D2CA!important;
+  color:var(--forma-graphite)!important;
+  background:var(--forma-milkstone)!important;
+}
+
+/* Dialogs and footer: no near-black or stark white surfaces. */
+html body .product-dialog,
+html body .drawer{
+  background:var(--forma-milkstone)!important;
+  color:var(--forma-graphite)!important;
+}
+html body .product-dialog[open] .detail-sticky-actions{
+  background:rgba(240,237,233,.97)!important;
+  border-color:#D9D3CC!important;
+}
+html body footer#delivery{
+  background:var(--forma-graphite)!important;
+  color:#F4F0EB!important;
+}
+
+/* Higher-specificity legacy monochrome overrides inside product cards.
+   Explicitly neutralize old black/white paint without affecting photo pixels,
+   dimensions, purchase text weight, or the existing cart controls. */
+html body .product-card .product-info{
+  background:var(--forma-milkstone)!important;
+}
+html body .product-card .product-name,
+html body .product-card .product-price,
+html body .recent-card .recent-name,
+html body .recent-prices strong{
+  color:var(--forma-graphite)!important;
+}
+html body .product-card .product-meta,
+html body .product-card .price-kind,
+html body .product-card .retail-row,
+html body .product-card del{
+  color:#686B6C!important;
+}
+html body .product-card .quick-add,
+html body .recent-card .recent-add{
+  background:var(--forma-graphite)!important;
+  border-color:var(--forma-graphite)!important;
+  color:var(--forma-milkstone)!important;
+}
+html body .product-card .quick-add:hover,
+html body .recent-card .recent-add:hover{
+  background:#30363A!important;
+  border-color:#30363A!important;
+}
+html body .product-card .product-categories .product-type:not(.product-new-badge),
+html body .product-card .product-categories .product-category-link,
+html body .detail-breadcrumbs button,
+html body .designer-discount{
+  background:#E7E2DC!important;
+  border-color:#D7D0C8!important;
+  color:var(--forma-graphite)!important;
+}
+html body .site-header .action-count{
+  background:var(--forma-graphite)!important;
+  border-color:var(--forma-pearl)!important;
+  color:var(--forma-milkstone)!important;
+}
+html body .pagination .page-button.page-arrow{
+  background:#E6E2DC!important;
+  border-color:#D7D0C8!important;
+  color:var(--forma-graphite)!important;
+}
+html body .mobile-scroll-button{
+  background:var(--forma-milkstone)!important;
+  border-color:var(--forma-soft-line)!important;
+  color:var(--forma-graphite)!important;
+}
+html body .filters,
+html body .favorites-toolbar,
+html body .gallery,
+html body .gallery-stage{
+  background:#EDE9E3!important;
+  border-color:#DDD7D0!important;
+}

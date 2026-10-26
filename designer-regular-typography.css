@@ -1,0 +1,100 @@
+/* FORMA HOME Design Private — regular type preview (2026-10-13).
+ * Based on the approved mist-blue/champagne palette v1 and large, readable
+ * category typography.  Only font-weight changes; NO font sizes, colors,
+ * button treatments, layout, photographs, product data, or JS are modified.
+ *
+ * Visual-text font-weight:400 everywhere except the Georgia FORMA HOME lockup
+ * and pictograms, which retain their existing styling.
+ */
+
+/* Main content, product and cart dialogs, and footer: semantic text elements.
+   Using stable container IDs keeps the override ahead of earlier !important
+   declarations without using universal '*' rules on the large product grid. */
+html body :is(#top,#productDialog,#cartDialog,#delivery)
+  :is(h1,h2,h3,h4,h5,h6,p,small,strong,b,button,select,option,label,legend,summary,a) {
+  font-weight:400!important;
+}
+
+/* Text wrapped in spans/divs with explicit weights in earlier CSS.
+   Class list is deliberately restricted to typographic UI elements; category
+   icon tiles, SVGs, arrows and furniture imagery are not restyled. */
+html body :is(#top,#productDialog,#cartDialog,#delivery)
+  :is(
+    .mobile-category-name,
+    .mobile-category-option>span,
+    .mobile-category-all>span,
+    .mobile-category-hint,
+    .mobile-category-trigger small,
+    .mobile-category-option small,
+    .category-main>span:nth-child(2),
+    .category-main small,
+    .category-subgroup h3,
+    .category-subgroup .category-chip,
+    .category-chip span,
+    .product-name,
+    .product-price,
+    .detail-price,
+    .price-kind,
+    .price-stack,
+    .retail-row,
+    .product-meta,
+    .product-type,
+    .product-sleep-size,
+    .product-sleep-size strong,
+    .designer-discount,
+    .product-new-badge,
+    .new-products-toggle,
+    .recent-name,
+    .recent-variant,
+    .recent-prices,
+    .recent-bottom,
+    .variant-label,
+    .variant-text,
+    .result-count,
+    .eyebrow,
+    .cart-total,
+    .cart-item strong,
+    .cart-item .cart-quantity,
+    .detail-cart-feedback,
+    .detail-cart-feedback-status,
+    .card-cart-quantity,
+    .card-cart-quantity span,
+    .card-cart-quantity strong,
+    .action-count,
+    .pagination-gap
+  ) {
+  font-weight:400!important;
+}
+
+/* Extra specificity for control labels that earlier styles force bold. */
+html body #top .catalog-utility :is(.filter-toggle,.sort-field select),
+html body #top .catalog-tools .search-submit,
+html body #top .product-card :is(.quick-add,.product-name,.product-price,.product-new-badge),
+html body #productDialog .detail-sticky-actions .primary-button,
+html body #cartDialog .cart-footer .primary-button {
+  font-weight:400!important;
+}
+
+/* Header controls are regular too; preserve the brand mark and icon glyphs. */
+html body .site-header :is(button,small,.action-count) {
+  font-weight:400!important;
+}
+
+/* Restoring a previously approved exception: Georgia wordmark unchanged. */
+html body .brand-line,
+html body .brand-line .brand-forma,
+html body .brand-line .brand-home,
+html body .brand-line .brand-slash {
+  font-weight:700!important;
+}
+
+/* Only symbol-only controls keep the original glyph stroke weight. */
+html body #top .mobile-scroll-button { font-weight:800!important; }
+html body #top .card-cart-quantity button,
+html body #productDialog .detail-cart-feedback button { font-weight:700!important; }
+html body #productDialog .detail-favorite { font-weight:900!important; }
+
+html body #toast { font-weight:400!important; }
+
+/* The prior preview's mobile sizes and responsive wraps remain authoritative.
+   Subcategories keep 16–18 px on mobile; no media-dependent weight changes. */

@@ -1,0 +1,22 @@
+{
+  "sources": [
+    "styles.css",
+    "enhancements.css",
+    "axes.css",
+    "ui.css",
+    "styles/layout.css",
+    "architectural-minimal.css",
+    "designer-indigo-champagne-preview.css",
+    "designer-readable-categories.css",
+    "designer-regular-typography.css",
+    "designer-background-b.css",
+    "designer-palette-surfaces.css",
+    "designer-blue-ivory-linen.css",
+    "designer-warm-beige-linen.css",
+    "designer-pearl-linen-graphite.css",
+    "designer-card-consistency.css",
+    "designer-two-row-swatches.css",
+    "designer-approved-pearl-palette-lock.css",
+    "mobile-stability.css"
+  ]
+}

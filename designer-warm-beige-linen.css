@@ -1,0 +1,148 @@
+/* FORMA HOME Design Private — warm beige / linen / ivory preview.
+   Based on the REAL designer catalog and approved regular typography.
+   Color-only overrides: no product data, photos, structure, JS or font changes.
+   Keep the solid dark-indigo purchase/action buttons. */
+:root{
+  --forma-mist-surface:#f6f0e7;
+  --forma-champagne-surface:#f5efe5;
+  --forma-milk-surface:#fffefd;
+  --forma-palette-line:#e2d8ca;
+  --forma-palette-ink:#292c32;
+}
+
+/* Warm, scrolling color areas: ivory, flax, soft sand and almond.
+   The alternating zones are painted over the entire page height; they move
+   with scrolling, without animation/fixed attachment or blur effects. */
+html body{
+  background-color:#faf8f4!important;
+  background-image:
+    radial-gradient(ellipse 113% 26% at -4% 7%,
+      rgba(213,186,151,.43) 0%,rgba(233,215,192,.20) 43%,transparent 82%),
+    radial-gradient(ellipse 88% 23% at 98% 21%,
+      rgba(233,217,194,.35) 0%,rgba(249,242,231,.22) 44%,transparent 81%),
+    radial-gradient(ellipse 111% 25% at -5% 36%,
+      rgba(201,175,143,.33) 0%,rgba(234,217,194,.17) 44%,transparent 81%),
+    radial-gradient(ellipse 89% 21% at 101% 51%,
+      rgba(232,211,181,.36) 0%,rgba(247,239,225,.20) 44%,transparent 82%),
+    radial-gradient(ellipse 110% 26% at -5% 65%,
+      rgba(207,179,143,.40) 0%,rgba(232,211,184,.18) 44%,transparent 83%),
+    radial-gradient(ellipse 86% 23% at 99% 81%,
+      rgba(226,208,184,.35) 0%,rgba(248,241,232,.21) 43%,transparent 81%),
+    radial-gradient(ellipse 109% 22% at 4% 95%,
+      rgba(209,182,147,.33) 0%,rgba(236,219,196,.16) 45%,transparent 82%),
+    linear-gradient(180deg,
+      #f9f7f2 0%,#fcfbf8 18%,#f3ebdf 35%,
+      #fbf9f5 51%,#f3eade 72%,#faf8f4 100%)!important;
+  background-size:100% 100%!important;
+  background-repeat:no-repeat!important;
+  background-attachment:scroll!important;
+}
+
+/* The real top promotion, no gray or blue wash. */
+html body main#top>.hero .hero-content{
+  background:linear-gradient(108deg,
+    #e1ceb4 0%,#f1e5d4 39%,#fcf9f3 71%,#eee0ca 100%)!important;
+  border-color:#ddcdb7!important;
+}
+
+/* Light warm header and discreet beige separators. */
+html body .site-header{
+  background:rgba(251,249,245,.97)!important;
+  border-color:#e4d9cc!important;
+}
+html body .mobile-category-shell,
+html body .category-primary,
+html body .category-row{
+  background:#fffdfa!important;
+  border-color:#e1d8cd!important;
+}
+html body .mobile-category-section+.mobile-category-section{
+  border-color:#e9e1d7!important;
+}
+
+/* The menu and its children remain mostly ivory/white; background carries
+   the visual movement instead of painting every category row. */
+html body .mobile-category-trigger,
+html body .mobile-category-panel,
+html body .mobile-category-option,
+html body .category-main,
+html body .category-subgroup,
+html body .category-subgroup .category-chip{
+  background:#fffefd!important;
+  border-color:#e7dfd4!important;
+  color:#293039!important;
+}
+
+/* Selection is oatmeal beige, not bluish or gray. */
+html body .mobile-category-section.selected>.mobile-category-trigger,
+html body .mobile-category-section.open>.mobile-category-trigger,
+html body .mobile-category-section.open.selected>.mobile-category-trigger,
+html body .mobile-category-option.active,
+html body .category-main.active,
+html body .category-subgroup.active,
+html body .category-subgroup .category-chip.active,
+html body .category-chip.active,
+html body .category-chip[aria-pressed="true"]{
+  background:#efe1cf!important;
+  border-color:#dac5aa!important;
+  color:#303139!important;
+}
+
+/* Navigation feedback also matches linen/beige rather than blue. */
+html body .mobile-category-trigger:hover,
+html body .mobile-category-trigger:focus-visible,
+html body .mobile-category-option:hover,
+html body .mobile-category-option:focus-visible,
+html body .category-subgroup .category-chip:hover:not(.active),
+html body .category-main:hover:not(.active){
+  background:#f8f0e5!important;
+  border-color:#dccbb5!important;
+}
+html body .mobile-category-hint{
+  background:#f8f2e9!important;
+  border-color:#e9ded0!important;
+  color:#6c625a!important;
+}
+
+/* Quiet beige capsules and icon tiles; no changes to SVG assets. */
+html body .mobile-category-trigger small,
+html body .mobile-category-option small{
+  background:#f2eee8!important;
+  color:#5b5853!important;
+}
+html body .mobile-category-section.selected>.mobile-category-trigger small,
+html body .mobile-category-section.open>.mobile-category-trigger small,
+html body .mobile-category-option.active small{
+  background:rgba(255,255,255,.80)!important;
+  color:#514c46!important;
+}
+html body .mobile-category-trigger>.mobile-category-icon,
+html body .mobile-category-section.open>.mobile-category-trigger>.mobile-category-icon,
+html body .mobile-category-section.selected>.mobile-category-trigger>.mobile-category-icon,
+html body .category-main>.category-icon{
+  background-color:#f7f1e8!important;
+  color:#544d46!important;
+  filter:grayscale(1) contrast(1.12)!important;
+}
+
+/* Card surfaces stay white so product photography looks accurate. */
+html body .product-card,
+html body .recent-card{
+  background:#fff!important;
+  border-color:#e6ded4!important;
+}
+html body .search-field,
+html body .catalog-tools .search-field,
+html body .sort-field,
+html body .catalog-utility .sort-field{
+  background:#fff!important;
+  border-color:#e1d7ca!important;
+}
+html body .new-products-toggle:not(.active),
+html body .product-new-badge{
+  background:#f4e9d9!important;
+  border-color:#e1cdae!important;
+  color:#625140!important;
+}
+
+/* Approved indigo solid buttons, typography and layout intentionally untouched. */

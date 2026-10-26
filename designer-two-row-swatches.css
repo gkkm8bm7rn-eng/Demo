@@ -1,0 +1,217 @@
+/* FORMA HOME Design Private — touch-friendly color palettes.
+ * Preview branch: Pearl Linen, white photo stages and aligned purchase
+ * buttons remain unchanged. Four columns by two rows, with 30px touch
+ * targets and 22px painted colors. No sideways swatch carousel.
+ */
+
+/* Four 30px targets + three 6px gaps = 138px, with 2px side padding.
+ * The 2-column catalog at <=359px uses three columns instead, retaining
+ * all 30px hit areas without horizontal page overflow. */
+html body .product-card .card-variants--two-rows {
+  display:grid!important;
+  grid-template-columns:repeat(4,30px)!important;
+  grid-auto-flow:row!important;
+  grid-auto-rows:30px!important;
+  justify-content:start!important;
+  align-content:start!important;
+  align-items:center!important;
+  justify-items:center!important;
+  column-gap:6px!important;
+  row-gap:8px!important;
+  width:max-content!important;
+  max-width:100%!important;
+  min-width:0!important;
+  padding:4px 2px!important;
+  margin:11px 0 3px!important;
+  box-sizing:border-box!important;
+  overflow:visible!important;
+  overflow-x:visible!important;
+  overflow-y:visible!important;
+  scroll-snap-type:none!important;
+  scrollbar-width:auto!important;
+}
+
+/* Outer box is 30x30px for fingers; inset four-pixel border leaves a
+   22px colored center. Don't alter actual color swatches/composites. */
+html body .product-card .card-variants--two-rows .card-swatch {
+  display:block!important;
+  justify-self:center!important;
+  align-self:center!important;
+  flex:none!important;
+  box-sizing:border-box!important;
+  width:30px!important;
+  height:30px!important;
+  min-width:30px!important;
+  min-height:30px!important;
+  max-width:30px!important;
+  max-height:30px!important;
+  margin:0!important;
+  padding:0!important;
+  border:4px solid #F4F0EB!important;
+  border-radius:50%!important;
+  scroll-snap-align:none!important;
+  touch-action:manipulation;
+}
+html body .product-card .card-variants--two-rows .card-swatch.active {
+  outline:2px solid #3D4246!important;
+  outline-offset:1px!important;
+}
+
+/* The final +N cell is a real, 30px accessible button, linked to the
+   product detail with its complete palette. */
+html body .product-card .card-variants-more {
+  display:flex!important;
+  justify-self:center!important;
+  align-self:center!important;
+  align-items:center!important;
+  justify-content:center!important;
+  box-sizing:border-box!important;
+  flex:none!important;
+  width:30px!important;
+  height:30px!important;
+  min-width:30px!important;
+  min-height:30px!important;
+  max-width:30px!important;
+  max-height:30px!important;
+  margin:0!important;
+  padding:0!important;
+  border:1px solid #CFC9C1!important;
+  border-radius:50%!important;
+  background:#E9E5E0!important;
+  color:#3D4246!important;
+  font:400 11px/1 ui-sans-serif,system-ui,-apple-system,sans-serif!important;
+  letter-spacing:-.25px!important;
+  white-space:nowrap!important;
+  cursor:pointer!important;
+  touch-action:manipulation;
+}
+
+/* Upholstery and frame are separate independent groups. At this tap
+   size two groups cannot fit side-by-side on a narrow two-card mobile
+   grid, so stack the groups vertically rather than shrink the targets.
+   Each of the two groups has no more than two rows of four. */
+html body .product-card .dual-axes-compact {
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  justify-content:start!important;
+  align-items:start!important;
+  gap:10px!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:100%!important;
+  margin:11px 0 3px!important;
+  overflow:visible!important;
+  overflow-x:visible!important;
+  overflow-y:visible!important;
+  scroll-snap-type:none!important;
+}
+html body .product-card .dual-axes-compact .axis-group-compact {
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  flex:none!important;
+  width:100%!important;
+  min-width:0!important;
+  max-width:100%!important;
+  gap:4px!important;
+}
+/* Compact labels distinguish upholstery from frame after stacking. */
+html body .product-card .dual-axes-compact .axis-group-compact::before {
+  display:block;
+  color:#686B6C;
+  font:400 10px/1.2 ui-sans-serif,system-ui,-apple-system,sans-serif;
+}
+html body .product-card .dual-axes-compact .axis-group-compact:first-child::before {
+  content:"Обивка";
+}
+html body .product-card .dual-axes-compact .axis-group-compact:last-child::before {
+  content:"Каркас";
+}
+html body .product-card .dual-axes-compact .axis-options {
+  display:grid!important;
+  grid-template-columns:repeat(4,30px)!important;
+  grid-auto-flow:row!important;
+  grid-auto-rows:30px!important;
+  justify-content:start!important;
+  align-content:start!important;
+  justify-items:center!important;
+  align-items:center!important;
+  width:max-content!important;
+  min-width:0!important;
+  max-width:100%!important;
+  padding:3px 2px!important;
+  margin:0!important;
+  box-sizing:border-box!important;
+  column-gap:6px!important;
+  row-gap:8px!important;
+  overflow:visible!important;
+  overflow-x:visible!important;
+}
+html body .product-card .dual-axes-compact .axis-swatch {
+  flex:none!important;
+  justify-self:center!important;
+  align-self:center!important;
+  box-sizing:border-box!important;
+  width:30px!important;
+  height:30px!important;
+  min-width:30px!important;
+  min-height:30px!important;
+  max-width:30px!important;
+  max-height:30px!important;
+  padding:0!important;
+  margin:0!important;
+  border:4px solid #F4F0EB!important;
+  touch-action:manipulation;
+}
+html body .product-card .dual-axes-compact .axis-swatch.active {
+  box-shadow:0 0 0 2px #3D4246!important;
+}
+html body .product-card .axis-more {
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  justify-self:center!important;
+  align-self:center!important;
+  flex:none!important;
+  box-sizing:border-box!important;
+  width:30px!important;
+  height:30px!important;
+  min-width:30px!important;
+  min-height:30px!important;
+  max-width:30px!important;
+  max-height:30px!important;
+  padding:0!important;
+  margin:0!important;
+  background:#E9E5E0!important;
+  border:1px solid #CFC9C1!important;
+  border-radius:50%!important;
+  color:#3D4246!important;
+  font:400 11px/1 ui-sans-serif,system-ui,-apple-system,sans-serif!important;
+  letter-spacing:-.25px!important;
+  white-space:nowrap!important;
+  cursor:pointer!important;
+  touch-action:manipulation;
+}
+html body .product-card :is(.card-variants-more,.axis-more):hover {
+  background:#DDD8D2!important;
+  border-color:#A8A19A!important;
+}
+html body .product-card :is(.card-swatch,.axis-swatch,.card-variants-more,.axis-more):focus-visible {
+  outline:2px solid #3D4246!important;
+  outline-offset:2px!important;
+}
+
+/* Preserve the 30px touch target on the narrowest iPhones.
+   Three instead of four columns; the JavaScript correspondingly
+   displays at most 5 colors + N, still no third row or horizontal pan. */
+@media(max-width:359px) {
+  html body .product-card .card-variants--two-rows,
+  html body .product-card .dual-axes-compact .axis-options {
+    grid-template-columns:repeat(3,30px)!important;
+  }
+  html body .product-card .dual-axes-compact {
+    gap:8px!important;
+  }
+}
+
+/* Text-only variant choices and full-screen product details are untouched. */

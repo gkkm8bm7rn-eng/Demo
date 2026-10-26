@@ -1,0 +1,28 @@
+/* FORMA HOME Design Private — background B: stronger blue/champagne fields.
+   More distinctive, wide, alternating wash of color as the PAGE SCROLLS.
+   No fixed wallpaper, animation, blur, decorative imagery or moving elements.
+   Text, product cards, dark buttons and approved typography stay untouched. */
+html body{
+  background-color:#f4f7fb!important;
+  background-image:
+    radial-gradient(ellipse 110% 26% at -3% 7%,
+      rgba(102,150,207,.49) 0%,rgba(154,191,228,.24) 43%,transparent 82%),
+    radial-gradient(ellipse 96% 24% at 99% 20%,
+      rgba(223,179,108,.43) 0%,rgba(241,211,161,.23) 44%,transparent 81%),
+    radial-gradient(ellipse 110% 26% at -3% 35%,
+      rgba(108,156,212,.44) 0%,rgba(166,198,233,.23) 45%,transparent 83%),
+    radial-gradient(ellipse 95% 25% at 101% 50%,
+      rgba(230,185,113,.40) 0%,rgba(242,217,175,.21) 44%,transparent 83%),
+    radial-gradient(ellipse 113% 26% at -5% 66%,
+      rgba(116,159,211,.42) 0%,rgba(173,200,231,.20) 46%,transparent 83%),
+    radial-gradient(ellipse 97% 24% at 101% 81%,
+      rgba(226,183,116,.40) 0%,rgba(246,223,187,.19) 43%,transparent 81%),
+    radial-gradient(ellipse 107% 22% at 2% 94%,
+      rgba(114,156,211,.37) 0%,rgba(172,201,232,.17) 45%,transparent 82%),
+    linear-gradient(180deg,
+      #eef4fb 0%,#f4f7fb 18%,#fbf6eb 33%,
+      #f0f5fb 51%,#fbf7ed 72%,#f1f5fb 100%)!important;
+  background-size:100% 100%!important;
+  background-repeat:no-repeat!important;
+  background-attachment:scroll!important;
+}

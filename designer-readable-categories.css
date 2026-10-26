@@ -1,0 +1,64 @@
+/* FORMA HOME Design Private — approved readable category typography.
+   Preview based on color variant 1. Changes are mobile-only and visual-only:
+   keep Georgia logo, dark solid buttons, gradient background and all existing data. */
+@media (max-width:640px) {
+  /* Top-level categories: prominent, but no oversized "Интерьер". */
+  html body .mobile-category-name {
+    font-size:clamp(17px,4.55vw,19px)!important;
+    font-weight:700!important;
+    line-height:1.22!important;
+    letter-spacing:-.014em!important;
+  }
+  html body .mobile-category-trigger {
+    min-height:58px;
+    padding-block:8px;
+  }
+
+  /* Child categories: noticeably larger, regular weight, relaxed line height. */
+  html body .mobile-category-option {
+    min-height:56px;
+    padding-block:11px;
+    align-items:center;
+  }
+  html body .mobile-category-option>span,
+  html body .mobile-category-all>span {
+    min-width:0;
+    font-size:clamp(16px,4.42vw,18px)!important;
+    font-weight:400!important;
+    line-height:1.32!important;
+    letter-spacing:-.012em!important;
+    white-space:normal!important;
+    overflow-wrap:break-word;
+  }
+
+  /* Counts are secondary and maintain their own column. */
+  html body .mobile-category-trigger small,
+  html body .mobile-category-option small {
+    font-size:11px!important;
+    font-weight:500!important;
+    line-height:1!important;
+  }
+  html body .mobile-category-hint {
+    font-size:11px!important;
+    font-weight:400!important;
+    letter-spacing:0!important;
+  }
+
+  /* Both toolbar labels are regular, without changing button color or shape. */
+  html body .catalog-utility .filter-toggle,
+  html body .catalog-utility .sort-field select {
+    font-size:clamp(14px,3.7vw,15px)!important;
+    font-weight:400!important;
+    letter-spacing:0!important;
+  }
+}
+
+/* Preserve legibility and room for counts/arrows on narrower iPhones. */
+@media (max-width:340px) {
+  html body .mobile-category-name{font-size:16px!important}
+  html body .mobile-category-option>span,
+  html body .mobile-category-all>span{font-size:16px!important}
+  html body .mobile-category-option{padding-left:47px!important}
+  html body .catalog-utility .filter-toggle,
+  html body .catalog-utility .sort-field select{font-size:13.5px!important}
+}

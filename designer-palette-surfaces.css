@@ -1,0 +1,133 @@
+/* FORMA HOME Design Private — matching surfaces for approved background B.
+   Fix gray monochrome fills that outlived the palette. All work is isolated
+   to this preview: typography, catalog data, photos, layout, button colors
+   and scrolling page background B remain unchanged. */
+
+:root{
+  --forma-mist-surface:#eef4fb;
+  --forma-champagne-surface:#faf0dd;
+  --forma-milk-surface:#fffefa;
+  --forma-palette-line:#c9d6e6;
+  --forma-palette-ink:#213550;
+}
+
+/* The gray advertising banner came from a more-specific monochrome rule.
+   Match its selector so the approved indigo/champagne blend actually renders. */
+html body main#top>.hero .hero-content{
+  background:linear-gradient(
+    108deg,#c5dcf3 0%,#e4eef9 44%,#f7e4c4 100%
+  )!important;
+  border-color:#bdd0e5!important;
+}
+
+/* The category group stays airy and lets the long page gradient breathe. */
+html body .mobile-category-shell,
+html body .category-primary{
+  background:var(--forma-milk-surface)!important;
+  border-color:var(--forma-palette-line)!important;
+}
+html body .mobile-category-section + .mobile-category-section{
+  border-color:#d7e1ed!important;
+}
+
+/* Unselected categories: warm near-white, not cool gray. */
+html body .mobile-category-trigger{
+  background:rgba(255,254,251,.98)!important;
+  color:var(--forma-palette-ink)!important;
+}
+html body .mobile-category-panel,
+html body .mobile-category-option{
+  background:#fffefa!important;
+  color:var(--forma-palette-ink)!important;
+  border-color:#e2e9f1!important;
+}
+
+/* Selected primary category: a soft blue-to-champagne wash.
+   The open category is a shade of mist blue; neither uses a gray fill. */
+html body .mobile-category-section.selected > .mobile-category-trigger{
+  background:linear-gradient(105deg,#dbe9f8 0%,#edf4fb 57%,#f9edda 100%)!important;
+  color:var(--forma-palette-ink)!important;
+}
+html body .mobile-category-section.open > .mobile-category-trigger{
+  background:linear-gradient(105deg,#e3eef9 0%,#f7f1e8 100%)!important;
+  color:var(--forma-palette-ink)!important;
+}
+html body .mobile-category-section.open.selected > .mobile-category-trigger{
+  background:linear-gradient(105deg,#d6e7f8 0%,#e9f3fa 52%,#f7e8cc 100%)!important;
+}
+
+/* Hover/focus states should be in the same palette, not monochrome. */
+html body .mobile-category-trigger:hover,
+html body .mobile-category-trigger:focus-visible,
+html body .mobile-category-option:hover,
+html body .mobile-category-option:focus-visible{
+  background:#eaf3fc!important;
+}
+html body .mobile-category-section.selected > .mobile-category-trigger:hover,
+html body .mobile-category-section.open > .mobile-category-trigger:hover{
+  background:linear-gradient(105deg,#d5e6f7 0%,#f5e8d2 100%)!important;
+}
+
+/* Open subcategory list is nearly white. The currently selected line is
+   powder blue, with just a trace of champagne at its far edge. */
+html body .mobile-category-option.active{
+  background:linear-gradient(105deg,#dbeafa 0%,#e9f3fc 76%,#f8efdd 100%)!important;
+  color:#1c3552!important;
+}
+html body .mobile-category-hint{
+  background:var(--forma-champagne-surface)!important;
+  border-color:#ead7b6!important;
+  color:#566781!important;
+}
+
+/* Count capsules are intentionally low-contrast in color, not in text. */
+html body .mobile-category-trigger small,
+html body .mobile-category-option small{
+  background:#e8f0fa!important;
+  color:#405673!important;
+}
+html body .mobile-category-section.selected > .mobile-category-trigger small,
+html body .mobile-category-section.open > .mobile-category-trigger small{
+  background:rgba(255,255,255,.79)!important;
+}
+html body .mobile-category-option.active small{
+  background:#f7ead3!important;
+  color:#425777!important;
+}
+
+/* Icon tiles: tint the original green vector artwork softly toward blue,
+   without changing icons, image assets or product/color swatches. */
+html body .mobile-category-trigger > .mobile-category-icon,
+html body .mobile-category-section.selected > .mobile-category-trigger > .mobile-category-icon,
+html body .mobile-category-section.open > .mobile-category-trigger > .mobile-category-icon{
+  background-color:#e2edfa!important;
+  color:#284768!important;
+  filter:grayscale(1) sepia(.36) hue-rotate(170deg) saturate(1.25)!important;
+}
+
+/* Desktop/tablet category palette — same semantics as mobile, no changes
+   to grid structure or typography. */
+html body .category-main,
+html body .category-subgroup,
+html body .category-subgroup .category-chip{
+  background:var(--forma-milk-surface)!important;
+  border-color:var(--forma-palette-line)!important;
+  color:var(--forma-palette-ink)!important;
+}
+html body .category-main.active,
+html body .category-subgroup.active,
+html body .category-subgroup .category-chip.active,
+html body .category-chip.active,
+html body .category-chip[aria-pressed="true"]{
+  background:linear-gradient(110deg,#d9e8f8 0%,#f7e9d2 100%)!important;
+  border-color:#aec7e1!important;
+  color:#1c3552!important;
+}
+html body .category-subgroup .category-chip:hover:not(.active),
+html body .category-main:hover:not(.active){
+  background:#eaf2fb!important;
+  border-color:#a9c1da!important;
+}
+
+/* Preserve the previously approved indigo for solid action buttons.
+   Explicitly no generic button or page-background overrides here. */

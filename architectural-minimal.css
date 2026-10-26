@@ -1,0 +1,389 @@
+/* FORMA HOME Designer — Monochrome Architecture. Visual-only overrides; no new layout or elements. */
+:root{--ink:#1C1C1C;--muted:#666666;--paper:#F2F2F2;--white:#FFFFFF;--line:#D0D0D0;--accent:#1C1C1C;--accent-dark:#141414;--green:#1C1C1C;--green-dark:#141414;--sage:#E2E2E2;--sage-deep:#B5B5B5}
+html body{background:#F2F2F2;color:#1C1C1C}
+html body .trade-note{display:none!important}
+html body .site-header{background:#F7F7F7!important;border-color:#D0D0D0!important;box-shadow:none!important}
+html body .site-header .favorites-button,html body .site-header .cart-button{border-color:#B5B5B5!important;border-radius:5px!important;color:#1C1C1C!important;background:#fff!important;box-shadow:none!important}
+html body .site-header .action-count{background:#1C1C1C!important}
+html body .brand-forma,html body .brand-home,html body .brand-slash{color:#1C1C1C!important}
+html body main#top>.hero{background:none!important;min-height:0!important}
+html body main#top>.hero .hero-content{display:flex!important;align-items:center!important;justify-content:center!important;min-height:0!important;height:auto!important;padding:18px!important;background:#E2E2E2!important;border:1px solid #B5B5B5!important;border-radius:4px!important;box-shadow:none!important}
+html body main#top>.hero .hero-content::before,html body main#top>.hero .hero-content::after{display:none!important;content:none!important}
+html body main#top>.hero .eyebrow{display:none!important}
+html body main#top>.hero h1{display:block!important;margin:0!important;max-width:none!important;font:400 clamp(19px,2.3vw,30px)/1.15 Georgia,serif!important;letter-spacing:-.025em!important;text-align:center!important;color:#1C1C1C!important}
+html body .catalog-tools .search-field{border-color:#B5B5B5!important;border-radius:5px!important;box-shadow:none!important;background:#fff!important}
+html body .search-submit,html body .filter-toggle{border-radius:4px!important;border-color:#1C1C1C!important;background:#1C1C1C!important;color:#fff!important}
+html body .catalog-utility .sort-field{border-color:#B5B5B5!important;border-radius:5px!important;background:#fff!important}
+html body .category-main,html body .category-subgroup,html body .category-chip{border-color:#B5B5B5!important;border-radius:5px!important;box-shadow:none!important;background:#fff!important;color:#1C1C1C!important}
+html body .category-main.active,html body .category-chip.active{background:#1C1C1C!important;color:#fff!important;border-color:#1C1C1C!important}
+html body .category-icon{border-radius:3px!important;background:#E2E2E2!important;color:#1C1C1C!important}
+html body .category-main.active .category-icon{background:#666666!important;color:#fff!important}
+html body .mobile-category-shell{border-radius:5px!important;border-color:#B5B5B5!important;box-shadow:none!important}
+html body .mobile-category-trigger{background:#fff!important;color:#1C1C1C!important}
+html body .mobile-category-section+.mobile-category-section{border-color:#D0D0D0!important}
+html body .mobile-scroll-button{border-radius:4px!important;color:#1C1C1C!important}
+html body .new-products-toggle{border-radius:4px!important;background:#fff!important;color:#1C1C1C!important;border-color:#B5B5B5!important;box-shadow:none!important}
+html body .new-products-toggle.active{background:#1C1C1C!important;color:#fff!important}
+html body .product-card{border-radius:4px!important;background:#fff!important;box-shadow:none!important}
+html body .product-card .product-visual{background:#E8E8E8!important}
+html body .product-name{font-family:Inter,system-ui,sans-serif!important;font-weight:600!important;color:#1C1C1C!important}
+html body .product-price,html body .detail-price{color:#1C1C1C!important}
+html body .quick-add,html body .primary-button,html body .detail-sticky-actions .primary-button{background:#1C1C1C!important;border-color:#1C1C1C!important;color:#fff!important;border-radius:4px!important;box-shadow:none!important}
+html body .designer-discount{background:#B5B5B5!important;color:#1C1C1C!important;border-radius:3px!important}
+html body .product-new-badge{background:#E2E2E2!important;color:#444444!important;border-radius:3px!important;border:1px solid #B5B5B5!important}
+html body .product-category-link,html body .product-type,html body .detail-breadcrumbs button{border-radius:3px!important}
+html body .product-dialog,html body .drawer{background:#F7F7F7!important;color:#1C1C1C!important}
+html body .gallery,html body .gallery-stage{background:#E8E8E8!important}
+html body .detail-favorite{background:#fff!important;color:#1C1C1C!important;border-radius:4px!important;border-color:#B5B5B5!important}
+html body .product-dialog[open] .detail-sticky-actions{background:rgba(250,250,248,.96)!important;border-radius:6px!important;border-color:#C8C8C8!important}
+html body .page-button.active{background:#1C1C1C!important;border-color:#1C1C1C!important}
+html body footer#delivery{background:#1C1C1C!important}
+@media(max-width:640px){html body main#top>.hero{margin:8px 12px 0!important;padding:0!important}html body main#top>.hero .hero-content{min-height:56px!important;padding:12px!important}html body main#top>.hero h1{display:block!important;font-size:clamp(17px,4.4vw,21px)!important;line-height:1.17!important}html body .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px 8px!important}html body .product-card .product-info{padding:9px 9px 11px!important}html body .new-products-toggle{font-size:11px!important;padding:4px 6px!important}}
+
+/* Monochrome polish: neutral gray only, high-contrast text, original brand lettering. */
+html body{background:#F2F2F2!important;color:#1C1C1C!important}
+html body .site-header{background:#F7F7F7!important}
+html body .header-actions button{box-shadow:none!important}
+html body .catalog-section>.section-heading h2{color:#1C1C1C!important}
+html body .catalog-section>.section-heading .result-count{color:#666666!important}
+html body .search-field input,html body .sort-field select{color:#1C1C1C!important}
+html body .catalog-tools,html body .catalog-section>.section-heading,html body .category-row{border-color:#D0D0D0!important}
+html body .category-primary,html body .mobile-category-shell{background:#F7F7F7!important}
+html body .category-subgroup.active{border-color:#1C1C1C!important;background:#E2E2E2!important;color:#1C1C1C!important}
+html body .category-chip:hover,html body .category-main:hover{border-color:#666666!important}
+html body .mobile-category-panel,html body .mobile-category-option{background:#F7F7F7!important;color:#1C1C1C!important}
+html body .mobile-category-hint{background:#E2E2E2!important;color:#444444!important}
+html body .mobile-category-trigger[aria-expanded=true]{background:#E2E2E2!important}
+html body .product-card{border-color:#D0D0D0!important}
+html body .product-meta,html body .price-kind,html body .retail-row,html body .product-card del{color:#666666!important}
+html body .product-price,html body .detail-price{font-weight:750!important}
+html body .quick-add:hover,html body .primary-button:hover,html body .search-submit:hover{background:#444444!important}
+html body .product-type:not(.product-new-badge),html body .product-category-link{border-color:#C8C8C8!important;color:#444444!important;background:#F7F7F7!important}
+html body .product-new-badge{color:#1C1C1C!important;background:#E2E2E2!important}
+html body .designer-discount{background:#B5B5B5!important;color:#1C1C1C!important}
+html body .detail-breadcrumbs button{background:#E2E2E2!important;color:#1C1C1C!important}
+html body .detail-favorite.active{background:#1C1C1C!important;color:#fff!important}
+html body .gallery-nav{color:#1C1C1C!important}
+html body .cart-total,html body .cart-item strong{color:#1C1C1C!important}
+html body .favorites-toolbar{background:#E8E8E8!important;border-color:#C8C8C8!important;color:#1C1C1C!important}
+html body .share-selection,html body .messenger-button{border-color:#666666!important;color:#1C1C1C!important}
+html body .page-button.active{color:#fff!important}
+@media(max-width:640px){
+ html body .product-name{font-size:14px!important;line-height:1.25!important}
+ html body .product-price{font-size:18px!important}
+ html body .price-kind,html body .retail-row{font-size:11px!important}
+ html body .catalog-section>.section-heading h2{font-weight:500!important}
+}
+
+/* Monochrome finish: category icons, favorites, pagination, recent products. */
+/* These are paint-only changes: no product images, grids, content or interactions are changed. */
+html body .product-card .product-categories .product-type:not(.product-new-badge),
+html body .product-card .product-categories .product-category-link{
+  background:#E2E2E2!important;color:#333333!important;
+  border-color:#D0D0D0!important;border-radius:3px!important;
+}
+html body .product-card .product-categories .product-category-link:hover,
+html body .product-card .product-categories .product-category-link:focus-visible{
+  background:#D0D0D0!important;color:#1C1C1C!important;
+  outline-color:#666666!important;
+}
+html body .product-sleep-size,
+html body .category-subgroup h3,
+html body .category-subgroup .category-chip:not(.active),
+html body .mobile-category-chevron,
+html body .mobile-category-option>i{color:#444444!important}
+html body .category-subgroup .category-chip{border-color:#B5B5B5!important;background:#F7F7F7!important}
+html body .category-subgroup .category-chip.active{background:#1C1C1C!important;color:#FFFFFF!important;border-color:#1C1C1C!important}
+html body .category-subgroup .category-chip:hover:not(.active){background:#E2E2E2!important}
+html body .mobile-category-trigger:hover,
+html body .mobile-category-trigger:focus-visible,
+html body .mobile-category-option:hover,
+html body .mobile-category-option:focus-visible{background:#E8E8E8!important}
+html body .mobile-category-section.selected>.mobile-category-trigger,
+html body .mobile-category-section.open>.mobile-category-trigger{background:#E2E2E2!important}
+html body .mobile-category-trigger small,
+html body .mobile-category-option small{background:#E8E8E8!important;color:#555555!important}
+html body .mobile-category-option.active{background:#D0D0D0!important;color:#1C1C1C!important}
+html body .mobile-category-shell.has-open .mobile-category-accordion{scrollbar-color:#B5B5B5 #F2F2F2!important}
+/* Category illustrations are supplied as originally green SVG assets.
+   Grayscale only the icon tiles, never fabric/color swatches or product photos. */
+html body .category-main>.category-icon,
+html body .mobile-category-trigger>.mobile-category-icon{
+  filter:grayscale(1) contrast(1.2)!important;
+  background-color:#E2E2E2!important;
+  color:#333333!important;
+}
+html body .category-main.active[data-main-category]:not([data-main-category="all"])>.category-icon,
+html body .mobile-category-section.open>.mobile-category-trigger>.mobile-category-icon,
+html body .mobile-category-section.selected>.mobile-category-trigger>.mobile-category-icon{
+  background-color:#E2E2E2!important;color:#333333!important;
+}
+html body .mobile-category-hint>span{filter:grayscale(1) contrast(1.15)!important}
+html body .catalog-utility .sort-field::before{filter:grayscale(1) contrast(1.2)!important}
+html body .catalog-utility .sort-field::after{border-right-color:#444444!important;border-bottom-color:#444444!important}
+html body .search-field::before{border-color:#444444!important}
+html body .search-field::after{background:#444444!important}
+html body .search-field:focus-within{border-color:#777777!important;box-shadow:0 0 0 2px rgba(28,28,28,.10)!important}
+html body .category-main:focus-visible,
+html body .mobile-category-trigger:focus-visible,
+html body .axis-swatch:focus-visible,
+html body .card-swatch:focus-visible,
+html body .variant-swatch-option:focus-visible{outline-color:#1C1C1C!important}
+html body .axis-swatch.active{box-shadow:0 0 0 3px #1C1C1C!important}
+html body .variant-text.active{border-color:#1C1C1C!important}
+html body .variant-swatch-option.active{outline-color:#1C1C1C!important}
+/* Favorites keep their original red accent by user choice. */
+html body button[data-favorite],
+html body button[data-favorite].active{color:#b74736!important}
+html body .site-header .favorites-button .action-icon{color:#b74736!important}
+html body .detail-favorite:not(.active){color:#b74736!important;border-color:#B5B5B5!important}
+html body .detail-favorite.active{background:#FFFFFF!important;color:#b74736!important;border-color:#B5B5B5!important}
+/* Pagination: neutral arrows and matching controls. */
+html body .pagination .page-button{border-color:#B5B5B5!important;border-radius:5px!important;color:#1C1C1C}
+html body .pagination .page-button.active{background:#1C1C1C!important;border-color:#1C1C1C!important;color:#FFFFFF!important}
+html body .pagination .page-button.page-arrow{background:#E2E2E2!important;color:#444444!important;border-color:#D0D0D0!important}
+html body .pagination .page-button.page-arrow:hover:not(:disabled),
+html body .pagination .page-button.page-arrow:focus-visible{background:#D0D0D0!important;color:#1C1C1C!important}
+html body .pagination .pagination-gap{color:#666666!important}
+/* Recently viewed: same architectural finish as the main product grid. */
+html body .recent-card{background:#FFFFFF!important;border:1px solid #D0D0D0!important;border-radius:5px!important;box-shadow:none!important}
+html body .recent-image,html body .recent-image img{background:#F2F2F2!important}
+html body .recent-name{font-family:Inter,ui-sans-serif,system-ui,sans-serif!important;font-weight:650!important;color:#1C1C1C!important}
+html body .recent-variant{color:#666666!important}
+html body .recent-prices strong{color:#1C1C1C!important}
+html body .recent-prices del{color:#777777!important}
+html body .recent-add{background:#1C1C1C!important;color:#FFFFFF!important;border-radius:4px!important}
+html body .recent-add:hover,html body .recent-add:focus-visible{background:#444444!important}
+/* Cart quantity controls, delivery shortcuts and the short loading veil. */
+html body .detail-cart-feedback button,
+html body .card-cart-quantity button{border-color:#B5B5B5!important;color:#1C1C1C!important;border-radius:5px!important}
+html body .detail-cart-feedback button:hover,
+html body .card-cart-quantity button:hover{background:#E8E8E8!important}
+html body .detail-cart-feedback-status,
+html body .card-cart-quantity span{background:#1C1C1C!important;color:#FFFFFF!important;border-radius:5px!important}
+html body .site-header .delivery-button,
+html body .site-header .delivery-payment-button{background:#FFFFFF!important;border-color:#D0D0D0!important;color:#1C1C1C!important;border-radius:5px!important;box-shadow:none!important}
+html body .site-header .delivery-button:hover,
+html body .site-header .delivery-payment-button:hover{background:#E8E8E8!important;border-color:#B5B5B5!important}
+html body .site-header .delivery-button:focus-visible,
+html body .site-header .delivery-payment-button:focus-visible{outline:2px solid #1C1C1C!important;outline-offset:2px!important;box-shadow:none!important}
+html body .site-loader{background:#F2F2F2!important}
+html body .site-loader-brand .home{color:#1C1C1C!important}
+html body .site-loader-track::after{background:#1C1C1C!important}
+html body .site-loader-caption{color:#666666!important}
+html body footer#delivery .brand-forma,
+html body footer#delivery .brand-home,
+html body footer#delivery .brand-slash{color:#F2F2F2!important}
+@media(max-width:640px){
+  html body .recent-name{font-size:14px!important;line-height:1.25!important}
+  html body .recent-variant{font-size:11px!important}
+  html body .recent-prices strong{font-size:15px!important}
+  html body .recent-add{font-size:10px!important;min-height:30px!important}
+}
+
+/* Readable controls + stable catalog shell, October 2026 */
+/* Reserve the exact existing navigation footprint until the catalog data arrives.
+   This prevents the catalog below from jumping; it is NOT a new UI component. */
+html body .catalog-tools #categoryRow:empty{min-height:306px!important}
+@media(min-width:641px) and (max-width:900px){
+  html body .catalog-tools #categoryRow:empty{min-height:459px!important}
+}
+@media(max-width:640px){
+  html body .catalog-tools #categoryRow:empty{min-height:286px!important}
+}
+
+/* One consistent product-card type scale across mobile, tablet and desktop. */
+html body .product-card .product-name{
+  font-family:Inter,ui-sans-serif,system-ui,sans-serif!important;
+  font-size:clamp(14px,1.1vw,16px)!important;
+  line-height:1.25!important;
+  font-weight:650!important;
+  overflow-wrap:anywhere;
+}
+html body .product-card .product-meta{
+  font-size:12px!important;
+  line-height:1.35!important;
+}
+html body .product-card .product-type{
+  font-size:clamp(10px,.9vw,11px)!important;
+  line-height:1.2!important;
+  min-height:20px!important;
+}
+html body .product-card .product-sleep-size{font-size:12px!important}
+html body .product-card .price-kind,
+html body .product-card .retail-row{font-size:12px!important;line-height:1.3!important}
+html body .product-card .product-price{
+  font-size:clamp(18px,1.5vw,21px)!important;
+  line-height:1.15!important;
+  font-weight:750!important;
+}
+html body .product-card .quick-add{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  min-width:0!important;
+  min-height:46px!important;
+  padding:8px 9px!important;
+  border-radius:4px!important;
+  background:#1C1C1C!important;
+  color:#FFFFFF!important;
+  font-family:Inter,ui-sans-serif,system-ui,sans-serif!important;
+  font-size:14px!important;
+  font-weight:750!important;
+  line-height:1.2!important;
+  text-align:center!important;
+  white-space:normal!important;
+  overflow-wrap:normal!important;
+  box-sizing:border-box!important;
+}
+html body .recent-card .recent-name{
+  font-size:14px!important;
+  line-height:1.3!important;
+  font-weight:650!important;
+}
+html body .recent-card .recent-variant{font-size:12px!important}
+html body .recent-card .recent-prices strong{font-size:16px!important}
+html body .recent-card .recent-prices del{font-size:11px!important}
+html body .recent-card .recent-add{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:40px!important;
+  padding:7px 9px!important;
+  font-size:12px!important;
+  line-height:1.15!important;
+  font-weight:700!important;
+  white-space:normal!important;
+  text-align:center!important;
+}
+@media(min-width:901px){
+  /* The inherited fixed 340px cards clip longer labels once type becomes legible.
+     Allow natural height, preserving the exact same product grid and photo order. */
+  html body .product-card{height:auto!important;min-height:340px!important}
+  html body .product-card .product-visual{flex:0 0 auto!important;aspect-ratio:1.18/1!important}
+  html body .product-card .product-info{flex:1 1 auto!important}
+  html body .product-card .product-bottom{margin-top:auto!important}
+}
+@media(max-width:640px){
+  html body .product-card .product-name{font-size:14px!important}
+  html body .product-card .product-price{font-size:19px!important}
+  html body .product-card .product-info{padding:10px 10px 12px!important}
+  html body .product-card .quick-add{min-height:48px!important;font-size:14px!important}
+  html body .recent-card .recent-name{font-size:14px!important}
+  html body .recent-card .recent-add{min-height:40px!important}
+}
+@media(max-width:359px){
+  /* Very narrow phones: make the recently-viewed CTA readable without overflow. */
+  html body .recent-card .recent-bottom{flex-wrap:wrap!important}
+  html body .recent-card .recent-add{width:100%!important}
+}
+@media(prefers-reduced-motion:reduce){
+  html body .product-card .product-visual img{transition:none!important}
+}
+
+/* Stabilize initial product area and dynamic heading without new elements. */
+/* Keep the original footer below the viewport until the first catalog page
+   is rendered. The reserve only exists while the existing count is hidden,
+   so zero-results searches and empty favorites are unaffected. */
+html body .catalog-section:has(#resultCount[hidden]) #productGrid:empty{
+  min-height:max(360px,55svh)!important;
+}
+html body .catalog-section>.section-heading{min-height:52px!important}
+@media(min-width:641px) and (max-width:900px){
+ html body .catalog-section>.section-heading{min-height:56px!important}
+}
+@media(max-width:640px){
+ html body .catalog-section>.section-heading{min-height:30px!important}
+}
+@media(max-width:359px){
+ html body .catalog-section>.section-heading{min-height:57px!important}
+}
+
+/* iOS Safari scroll painting: avoid root clipping and many blurred compositor layers.
+   Keep card sizes, grid, colors and interactions unchanged. */
+@media (max-width:640px){
+  html,body{overflow-x:visible}
+  html{scroll-behavior:auto}
+  html body .site-header{-webkit-backdrop-filter:none;backdrop-filter:none}
+  html body .card-photo-nav,
+  html body .card-photo-position,
+  html body .gallery-nav{-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+
+
+/* Respect the hidden attribute even when legacy button styles use !important. */
+html body .product-card .quick-add[hidden],
+html body .recent-card .recent-add[hidden]{
+  display:none!important;
+}
+
+/* Cart feedback: price stays in its own row; compact, accessible quantity control follows. */
+.product-bottom.has-cart-quantity,
+.recent-bottom.has-cart-quantity{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  align-items:stretch!important;
+  gap:8px!important;
+}
+.product-bottom.has-cart-quantity>.card-cart-quantity,
+.recent-bottom.has-cart-quantity>.card-cart-quantity{
+  width:100%;
+  min-width:0;
+  margin:0;
+  grid-template-columns:44px minmax(0,1fr) 44px;
+  gap:6px;
+}
+html body .card-cart-quantity span{
+  white-space:nowrap;
+  overflow:hidden;
+  font-size:14px;
+}
+html body .card-cart-quantity strong{margin:0;font-size:15px}
+
+/* Mobile navigation and feedback: no blur/compositor effects on Safari. */
+@media(max-width:640px){
+  html body .mobile-category-hint{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:7px;
+    min-height:30px;
+    padding:7px 12px;
+    background:#f7f7f7!important;
+    color:#757575!important;
+    font-size:11px;
+    font-weight:550;
+    letter-spacing:0;
+    text-align:center;
+  }
+  html body .mobile-scroll-button{
+    width:32px;
+    height:32px;
+    min-width:32px;
+    border:1px solid #d0d0d0;
+    border-radius:50%!important;
+    background:#fff;
+    box-shadow:0 2px 7px rgba(0,0,0,.08);
+    color:#555!important;
+  }
+  html body .mobile-scroll-button:focus-visible{
+    outline:2px solid #333;
+    outline-offset:2px;
+  }
+  html body .card-cart-quantity button{
+    min-width:44px;
+    min-height:44px;
+  }
+  html body #toast{
+    top:74px;
+    bottom:auto;
+    max-width:calc(100vw - 36px);
+    padding:10px 16px;
+    border-radius:7px;
+    font-size:13px;
+    line-height:1.25;
+    text-align:center;
+    box-shadow:0 8px 24px rgba(0,0,0,.18);
+  }
+}
