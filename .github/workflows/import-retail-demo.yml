@@ -31,6 +31,7 @@ jobs:
           persist-credentials: false
 
       - name: Copy all catalog files, photographs, and layout
+        # The retail converter checks the 15 real product detail shards.
         shell: bash
         run: |
           set -euo pipefail
