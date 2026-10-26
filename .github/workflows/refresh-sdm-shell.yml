@@ -31,8 +31,10 @@ jobs:
           assert 'SdM / СдМ' in html
           assert 'site-loader-brand">SDM' in media
           assert 'site-loader{animation:none!important;transition:none!important;' in css
-          scripts = re.findall(r'<script src="([^"?]+\.js)', html)
-          styles = re.findall(r'<link rel="stylesheet" href="([^"?]+\.css)', html)
+          script_urls = re.findall(r'<script src="([^"]+\.js(?:\?[^"]*)?)"', html)
+          style_urls = re.findall(r'<link rel="stylesheet" href="([^"]+\.css(?:\?[^"]*)?)"', html)
+          scripts = [url.split('?')[0] for url in script_urls]
+          styles = [url.split('?')[0] for url in style_urls]
           assert styles == ['storefront.css']
           assert scripts == ['media-policy.js','variants.js','app.js','search-fallback.js','cart-feedback.js']
           for f in ['index.html', *styles, *scripts]:
@@ -40,7 +42,7 @@ jobs:
               assert 'FORMA HOME' not in contents.upper() and 'ФОРМА ХОУМ' not in contents.upper(), f
           files = [
              ('index.html?release='+release, 'index.html', 'index.html'),
-             *[(name+'?v='+release, name, None) for name in [*styles,*scripts]],
+             *[(url, url.split('?')[0], None) for url in [*style_urls,*script_urls]],
           ]
           assets=[]
           for url,name,key in files:
