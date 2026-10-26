@@ -66,7 +66,7 @@ function curateGallery(product,variant){
   loader.id='siteLoader';
   loader.className='site-loader';
   loader.setAttribute('aria-hidden','true');
-  loader.innerHTML='<div class="site-loader-inner"><div class="site-loader-brand"><span>FORMA</span> <span class="home">HOME</span><span class="slash"> / </span><span>ФОРМА</span> <span class="home">ХОУМ</span></div><div class="site-loader-track"></div><div class="site-loader-caption">Мебель для продуманного интерьера</div></div>';
+  loader.innerHTML='<div class="site-loader-inner"><div class="site-loader-brand">SDM</div><div class="site-loader-caption">Мебель для продуманного интерьера</div></div>';
   document.body.appendChild(loader);
   // Cached CSS and JS can update on separate requests. If the new loader styles
   // are not present yet, remove the markup immediately instead of ever showing
@@ -239,7 +239,7 @@ function curateGallery(product,variant){
       dialog.id='deliveryDialog';
       dialog.className='delivery-dialog';
       dialog.setAttribute('aria-labelledby','deliveryDialogTitle');
-      dialog.innerHTML='<div class="delivery-dialog-shell"><div class="delivery-dialog-head"><div><p class="delivery-dialog-kicker">FORMA HOME</p><h2 class="delivery-dialog-title" id="deliveryDialogTitle">Доставка и оплата</h2><p class="delivery-dialog-intro">Все основные условия — в одном месте. После закрытия вы останетесь там же, где смотрели каталог.</p></div><button class="forma-close" type="button" data-close-delivery aria-label="Закрыть">'+closeIcon+'</button></div><div class="delivery-dialog-body" data-delivery-dialog-body></div></div>';
+      dialog.innerHTML='<div class="delivery-dialog-shell"><div class="delivery-dialog-head"><div><p class="delivery-dialog-kicker">SdM</p><h2 class="delivery-dialog-title" id="deliveryDialogTitle">Доставка и оплата</h2><p class="delivery-dialog-intro">Все основные условия — в одном месте. После закрытия вы останетесь там же, где смотрели каталог.</p></div><button class="forma-close" type="button" data-close-delivery aria-label="Закрыть">'+closeIcon+'</button></div><div class="delivery-dialog-body" data-delivery-dialog-body></div></div>';
       document.body.appendChild(dialog);
     }
 

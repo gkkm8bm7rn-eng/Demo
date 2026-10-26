@@ -5,7 +5,7 @@
 @media(max-width:370px){.hero h1{font-size:42px}.product-grid{grid-template-columns:1fr}.product-name{font-size:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 
-/* FORMA HOME — restored brand system */
+/* SdM — restored brand system */
 :root{--paper:#f5f2ec;--ink:#201f1b;--muted:#686760;--line:#d8d4ca;--green:#5f7859;--green-dark:#435d41;--sage:#d9d9c8;--sage-deep:#bfc8ae;--accent:var(--green);--accent-dark:var(--green-dark)}
 .trade-note{height:33px;display:flex;align-items:center;justify-content:center;padding:0 16px;background:var(--ink);color:#fff;font-size:12px;letter-spacing:.01em;text-align:center}
 .site-header{top:0;height:78px;background:rgba(245,242,236,.96);box-shadow:0 8px 28px rgba(32,31,27,.07);border:0}
@@ -407,7 +407,7 @@ html body .category-main.active[data-main-category]:not([data-main-category="all
 }
 
 /* Source: ui.css */
-/* FORMA HOME consolidated UI styles: existing card polish + laptop density + cart quantity feedback. */
+/* SdM consolidated UI styles: existing card polish + laptop density + cart quantity feedback. */
 .price-stack{gap:3px}.price-kind,.retail-row{font-size:11px;line-height:1.2;color:#747168}.retail-row{display:flex;gap:5px;align-items:center}.quick-add{min-height:42px;padding:0 16px;border:0!important;border-radius:12px!important;background:#435d41!important;color:#fff!important;text-decoration:none!important;font-weight:700!important}.quick-add:hover{background:#31472f!important}
 .card-variants{flex-wrap:nowrap!important;max-width:100%;padding:2px;overflow-x:auto;scrollbar-width:none;scroll-snap-type:x proximity}.card-variants::-webkit-scrollbar{display:none}.card-swatch{flex:0 0 25px;scroll-snap-align:start;background:var(--swatch)!important}.card-swatch.composite{box-shadow:inset 0 0 0 1px rgba(32,31,27,.12)}.variant-text{flex:0 0 auto;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .header-actions{align-items:center}.favorites-button,.cart-button{min-height:46px;padding:0 17px;display:inline-flex;align-items:center;gap:8px;border:0;border-radius:15px;font-weight:750;cursor:pointer}.favorites-button{background:#dfe9dc;color:#314d32}.favorites-button:hover{background:#d1e0ce}.cart-button{background:#435d41!important;border-color:#435d41!important}.action-icon{font-size:22px;line-height:1}.action-count{min-width:23px;height:23px;padding:0 6px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:rgba(255,255,255,.24);font-size:11px}.favorites-button .action-count{background:#fff}.site-header .header-link{display:none}@media(max-width:640px){.site-header{padding-inline:12px}.brand-lockup{font-size:13px}.favorites-button,.cart-button{min-height:42px;padding:0 11px;border-radius:13px}.action-label{font-size:12px}}@media(max-width:470px){.action-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}.favorites-button,.cart-button{gap:5px}.brand-lockup{font-size:11px;letter-spacing:.06em}}
@@ -562,7 +562,7 @@ footer#delivery{display:flex;align-items:center;background:#252521;color:#fff;pa
     }
 
 /* Source: architectural-minimal.css */
-/* FORMA HOME Designer — Monochrome Architecture. Visual-only overrides; no new layout or elements. */
+/* SdM Designer — Monochrome Architecture. Visual-only overrides; no new layout or elements. */
 :root{--ink:#1C1C1C;--muted:#666666;--paper:#F2F2F2;--white:#FFFFFF;--line:#D0D0D0;--accent:#1C1C1C;--accent-dark:#141414;--green:#1C1C1C;--green-dark:#141414;--sage:#E2E2E2;--sage-deep:#B5B5B5}
 html body{background:#F2F2F2;color:#1C1C1C}
 html body .trade-note{display:none!important}
@@ -953,7 +953,7 @@ html body .card-cart-quantity strong{margin:0;font-size:15px}
 }
 
 /* Source: designer-indigo-champagne-preview.css */
-/* FORMA HOME Design Private — night indigo, mist blue, champagne.
+/* SdM Design Private — night indigo, mist blue, champagne.
    Preview-only color treatment; original structure, typography, products and scripts remain intact. */
 :root{
   --ink:#1e293c;
@@ -1049,7 +1049,7 @@ html body .product-image-stage::after{
 }
 
 /* Source: designer-readable-categories.css */
-/* FORMA HOME Design Private — approved readable category typography.
+/* SdM Design Private — approved readable category typography.
    Preview based on color variant 1. Changes are mobile-only and visual-only:
    keep Georgia logo, dark solid buttons, gradient background and all existing data. */
 @media (max-width:640px) {
@@ -1115,12 +1115,12 @@ html body .product-image-stage::after{
 }
 
 /* Source: designer-regular-typography.css */
-/* FORMA HOME Design Private — regular type preview (2026-10-13).
+/* SdM Design Private — regular type preview (2026-10-13).
  * Based on the approved mist-blue/champagne palette v1 and large, readable
  * category typography.  Only font-weight changes; NO font sizes, colors,
  * button treatments, layout, photographs, product data, or JS are modified.
  *
- * Visual-text font-weight:400 everywhere except the Georgia FORMA HOME lockup
+ * Visual-text font-weight:400 everywhere except the Georgia SdM lockup
  * and pictograms, which retain their existing styling.
  */
 
@@ -1217,7 +1217,7 @@ html body #toast { font-weight:400!important; }
    Subcategories keep 16–18 px on mobile; no media-dependent weight changes. */
 
 /* Source: designer-background-b.css */
-/* FORMA HOME Design Private — background B: stronger blue/champagne fields.
+/* SdM Design Private — background B: stronger blue/champagne fields.
    More distinctive, wide, alternating wash of color as the PAGE SCROLLS.
    No fixed wallpaper, animation, blur, decorative imagery or moving elements.
    Text, product cards, dark buttons and approved typography stay untouched. */
@@ -1247,7 +1247,7 @@ html body{
 }
 
 /* Source: designer-palette-surfaces.css */
-/* FORMA HOME Design Private — matching surfaces for approved background B.
+/* SdM Design Private — matching surfaces for approved background B.
    Fix gray monochrome fills that outlived the palette. All work is isolated
    to this preview: typography, catalog data, photos, layout, button colors
    and scrolling page background B remain unchanged. */
@@ -1382,7 +1382,7 @@ html body .category-main:hover:not(.active){
    Explicitly no generic button or page-background overrides here. */
 
 /* Source: designer-blue-ivory-linen.css */
-/* FORMA HOME: real site, blue + ivory/linen trial. Visual overrides only. */
+/* SdM: real site, blue + ivory/linen trial. Visual overrides only. */
 html body {
   background-color:#f9fbfe!important;
   background-image:
@@ -1439,7 +1439,7 @@ html body .mobile-category-section.open>.mobile-category-trigger>.mobile-categor
 html body .mobile-category-section.selected>.mobile-category-trigger>.mobile-category-icon {background-color:#f1f6fc!important}
 
 /* Source: designer-warm-beige-linen.css */
-/* FORMA HOME Design Private — warm beige / linen / ivory preview.
+/* SdM Design Private — warm beige / linen / ivory preview.
    Based on the REAL designer catalog and approved regular typography.
    Color-only overrides: no product data, photos, structure, JS or font changes.
    Keep the solid dark-indigo purchase/action buttons. */
@@ -1589,7 +1589,7 @@ html body .product-new-badge{
 /* Approved indigo solid buttons, typography and layout intentionally untouched. */
 
 /* Source: designer-pearl-linen-graphite.css */
-/* FORMA HOME Design Private — "Pearl Linen" visual-only preview.
+/* SdM Design Private — "Pearl Linen" visual-only preview.
  * Pearl #F0EDE9 | linen #E7E2DC | porcelain mist #E8E9E7
  * warm milkstone #F4F0EB | soft taupe #DDD8D2 | graphite #3D4246.
  * Isolated CSS appended after existing designer preview styles.
@@ -1907,7 +1907,7 @@ html body .gallery-stage{
 }
 
 /* Source: designer-card-consistency.css */
-/* FORMA HOME Design Private — approved "Pearl Linen" + card harmonization.
+/* SdM Design Private — approved "Pearl Linen" + card harmonization.
    Preview only: pure-white image stages and equal-bottom purchase controls.
    No photo changes, no fixed card heights, no font changes, no catalog JS. */
 
@@ -1969,7 +1969,7 @@ html body .product-card .product-bottom {
    quantities, cart feedback, button visibility or active selections. */
 
 /* Source: designer-two-row-swatches.css */
-/* FORMA HOME Design Private — touch-friendly color palettes.
+/* SdM Design Private — touch-friendly color palettes.
  * Preview branch: Pearl Linen, white photo stages and aligned purchase
  * buttons remain unchanged. Four columns by two rows, with 30px touch
  * targets and 22px painted colors. No sideways swatch carousel.
@@ -2188,7 +2188,7 @@ html body .product-card :is(.card-swatch,.axis-swatch,.card-variants-more,.axis-
 /* Text-only variant choices and full-screen product details are untouched. */
 
 /* Source: designer-approved-pearl-palette-lock.css */
-/* FORMA HOME Design Private — APPROVED "Pearl Linen" color lock.
+/* SdM Design Private — APPROVED "Pearl Linen" color lock.
  * References the exact approved palette from
  * preview/designer-pearl-linen-graphite-20261014.
  * This last layer suppresses residual sand/champagne/blue fills from
@@ -2510,3 +2510,9 @@ html body #productDialog>.dialog-close {
     background-attachment:scroll!important;
   }
 }
+
+/* Demo SDM: a static splash with no moving elements or fade. */
+html body .site-loader{animation:none!important;transition:none!important;opacity:1!important;visibility:visible!important}
+html body .site-loader.is-done{animation:none!important;transition:none!important;opacity:0!important;visibility:hidden!important}
+html body .site-loader::before,html body .site-loader-track{display:none!important;animation:none!important}
+html body .site-loader-brand{animation:none!important}

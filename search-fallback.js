@@ -135,7 +135,7 @@ function rewriteCartLinks(){
       return;
     }
     if(label.includes('e-mail')||label.includes('email')){
-      let subject='Заказ FORMA HOME',body='';
+      let subject='Заказ SdM',body='';
       try{
         const query=raw.includes('?')?raw.slice(raw.indexOf('?')):'';
         const params=new URLSearchParams(query);
@@ -176,7 +176,7 @@ document.addEventListener('click',function(event){
   if(!question)return;
 
   const page=location.href;
-  const body=`Здравствуйте! Хочу задать вопрос по FORMA HOME:\n\n${question}\n\nСтраница: ${page}`;
+  const body=`Здравствуйте! Хочу задать вопрос по SdM:\n\n${question}\n\nСтраница: ${page}`;
   const channel=button.dataset.questionChannel;
   event.preventDefault();
   event.stopImmediatePropagation();
@@ -191,6 +191,6 @@ document.addEventListener('click',function(event){
     openTelegram(body);
     return;
   }
-  if(channel==='email')location.assign(mailUrl('Вопрос FORMA HOME',body));
+  if(channel==='email')location.assign(mailUrl('Вопрос SdM',body));
 },true);
 })();

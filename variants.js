@@ -266,7 +266,7 @@ function auditVariantPresentation(products=state.products){
     const slots=window.matchMedia('(max-width:359px)').matches?6:8;
     if(choices.length>slots)report.legacyHiddenChoices+=choices.length-(slots-1);
   });
-  console.info('[FORMA HOME variant audit]',report);
+  console.info('[SdM variant audit]',report);
   window.lastVariantPresentationAudit=report;
   return report;
 }

@@ -227,7 +227,7 @@ const dialog=document.createElement('dialog');
 dialog.id='questionDialog';
 dialog.className='question-dialog';
 dialog.setAttribute('aria-labelledby','questionDialogTitle');
-dialog.innerHTML='<div class="question-dialog-shell"><div class="question-dialog-head"><div><p class="question-dialog-kicker">FORMA HOME</p><h2 class="question-dialog-title" id="questionDialogTitle">Задать вопрос</h2></div><button class="question-close" type="button" data-close-question aria-label="Закрыть">'+closeIcon+'</button></div><label class="question-field" for="questionText">Ваш вопрос<textarea id="questionText" maxlength="1200" placeholder="Напишите, что хотите уточнить о товаре, доставке, оплате или заказе"></textarea></label><p class="question-dialog-hint">Выберите удобный способ отправки. Сообщение откроется уже заполненным — как при оформлении заказа из корзины.</p><div class="question-actions"><button class="question-channel primary" type="button" data-question-channel="whatsapp">Отправить в WhatsApp</button><button class="question-channel" type="button" data-question-channel="telegram">Отправить в Telegram</button><button class="question-channel" type="button" data-question-channel="email">Отправить на почту</button></div><p class="question-error" id="questionError" hidden>Сначала напишите вопрос.</p></div>';
+dialog.innerHTML='<div class="question-dialog-shell"><div class="question-dialog-head"><div><p class="question-dialog-kicker">SdM</p><h2 class="question-dialog-title" id="questionDialogTitle">Задать вопрос</h2></div><button class="question-close" type="button" data-close-question aria-label="Закрыть">'+closeIcon+'</button></div><label class="question-field" for="questionText">Ваш вопрос<textarea id="questionText" maxlength="1200" placeholder="Напишите, что хотите уточнить о товаре, доставке, оплате или заказе"></textarea></label><p class="question-dialog-hint">Выберите удобный способ отправки. Сообщение откроется уже заполненным — как при оформлении заказа из корзины.</p><div class="question-actions"><button class="question-channel primary" type="button" data-question-channel="whatsapp">Отправить в WhatsApp</button><button class="question-channel" type="button" data-question-channel="telegram">Отправить в Telegram</button><button class="question-channel" type="button" data-question-channel="email">Отправить на почту</button></div><p class="question-error" id="questionError" hidden>Сначала напишите вопрос.</p></div>';
 document.body.appendChild(dialog);
 
 const textarea=dialog.querySelector('#questionText');
@@ -236,7 +236,7 @@ let previousOverflow='';
 function questionText(){return (textarea.value||'').trim()}
 function payload(question){
   const page=location.href;
-  const intro='Здравствуйте! Хочу задать вопрос по FORMA HOME:';
+  const intro='Здравствуйте! Хочу задать вопрос по SdM:';
   return {page,body:`${intro}\n\n${question}\n\nСтраница: ${page}`,telegram:`${intro}\n\n${question}`};
 }
 function openQuestion(){
@@ -260,7 +260,7 @@ dialog.addEventListener('click',event=>{
   let url='';
   if(channel==='whatsapp')url='https://wa.me/?text='+encodeURIComponent(data.body);
   if(channel==='telegram')url='https://t.me/share/url?url='+encodeURIComponent(data.page)+'&text='+encodeURIComponent(data.telegram);
-  if(channel==='email')url='mailto:'+ORDER_EMAIL+'?subject='+encodeURIComponent('Вопрос FORMA HOME')+'&body='+encodeURIComponent(data.body);
+  if(channel==='email')url='mailto:'+ORDER_EMAIL+'?subject='+encodeURIComponent('Вопрос SdM')+'&body='+encodeURIComponent(data.body);
   if(!url)return;
   if(channel==='email')location.href=url;
   else window.open(url,'_blank','noopener');
