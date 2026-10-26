@@ -1,35 +1,35 @@
 /* Generated with build-release.py. Cache ownership is the full registration
    scope, never a shared origin-wide prefix. */
-const SHELL_VERSION="20261024-designer-kemchand-d6b77c04f6";
+const SHELL_VERSION="20261026-sdm-demo-static-v2";
 const RESOURCES=[
   {
-    "url": "index.html?release=20261024-designer-kemchand-d6b77c04f6",
-    "key": "index.html",
-    "sha256": "2020202063e77875977a5674c4667eebb71f486b06447c060192918cfca16073"
+    "url": "index.html?release=20261026-sdm-demo-static-v2",
+    "sha256": "4407f4cee1e7ff43f04e763038c50b9e6fad0014dcefe35745b0eeac149344a0",
+    "key": "index.html"
   },
   {
-    "url": "storefront.css?v=20261024-designer-kemchand-d6b77c04f6",
-    "sha256": "47467a2c580a6b5cd99e1073cc431cc25e6c153cfcb40fc973abc56b2f11af57"
+    "url": "storefront.css?v=20261026-sdm-demo-static-v2",
+    "sha256": "af0a7b8d7a3383f9444cdf5d086ba05ecdf99328c50b548949b11c8024b2cd5c"
   },
   {
-    "url": "media-policy.js?v=20261024-designer-kemchand-d6b77c04f6",
-    "sha256": "96716768dcc89ed01dec49ef1fd76477180426d9f0ac09d4cfc697e357e25bef"
+    "url": "media-policy.js?v=20261026-sdm-demo-static-v2",
+    "sha256": "1086708a64ac375f71ca0bf293f8881ec1a6b3e4d3364962d6f28060a6e4b954"
   },
   {
-    "url": "variants.js?v=20261024-designer-kemchand-d6b77c04f6",
-    "sha256": "92df1a00a967df75e62c9332da1d722e4fa3ad955df0ad371d2398b9b3485d1c"
+    "url": "variants.js?v=20261026-sdm-demo-static-v2",
+    "sha256": "fa024d44bfa9aab83917e5e7169b4e7197d83210b69caee96960e8e1fd9f4f33"
   },
   {
-    "url": "app.js?v=20261024-designer-kemchand-d6b77c04f6",
-    "sha256": "ed35a1fc2b473ddde53a6d156512a51c534237dad72960eee9210d1ec7dcbef4"
+    "url": "app.js?v=20261026-sdm-demo-static-v2",
+    "sha256": "c948ef7dc2b9d7b8e07ead0ca965b1d07de886e2875995d969766b1bfc2be74b"
   },
   {
-    "url": "search-fallback.js?v=20261024-designer-kemchand-d6b77c04f6",
-    "sha256": "4cc7168e260f63ebe0ecfa67ac2c16016bbb8049bb3c19d8d44b6db8a73f236e"
+    "url": "search-fallback.js?v=20261026-sdm-demo-static-v2",
+    "sha256": "e26e7d15b396c483c1ff96cad9e452cf5533b3859912895d0a04fe8a26f78d69"
   },
   {
-    "url": "cart-feedback.js?v=20261024-designer-kemchand-d6b77c04f6",
-    "sha256": "94b2436fa53531cd59c01af9f99398c1e072fe1e10b51b3962fafab89cbf1d90"
+    "url": "cart-feedback.js?v=20261026-sdm-demo-static-v2",
+    "sha256": "96cca302ce14b13c77186a703f534b6e01a32b124a3ec24d72004b9001b35f3b"
   }
 ];
 const SCOPE=self.registration.scope;
