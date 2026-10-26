@@ -1,0 +1,64 @@
+name: Refresh SdM demo site cache
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/refresh-sdm-shell.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify branding and regenerate exact offline shell
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, re
+          from pathlib import Path
+          root = Path('.')
+          release = '20261026-sdm-demo-static-v2'
+          html = (root/'index.html').read_text(encoding='utf-8')
+          css = (root/'storefront.css').read_text(encoding='utf-8')
+          media = (root/'media-policy.js').read_text(encoding='utf-8')
+          assert '<title>SdM' in html
+          assert 'SdM / СдМ' in html
+          assert 'site-loader-brand">SDM' in media
+          assert 'site-loader{animation:none!important;transition:none!important;' in css
+          scripts = re.findall(r'<script src="([^"?]+\.js)', html)
+          styles = re.findall(r'<link rel="stylesheet" href="([^"?]+\.css)', html)
+          assert styles == ['storefront.css']
+          assert scripts == ['media-policy.js','variants.js','app.js','search-fallback.js','cart-feedback.js']
+          for f in ['index.html', *styles, *scripts]:
+              contents=(root/f).read_text(encoding='utf-8')
+              assert 'FORMA HOME' not in contents.upper() and 'ФОРМА ХОУМ' not in contents.upper(), f
+          files = [
+             ('index.html?release='+release, 'index.html', 'index.html'),
+             *[(name+'?v='+release, name, None) for name in [*styles,*scripts]],
+          ]
+          assets=[]
+          for url,name,key in files:
+              entry={'url':url,'sha256':hashlib.sha256((root/name).read_bytes()).hexdigest()}
+              if key: entry['key']=key
+              assets.append(entry)
+          template=(root/'scripts/sw.template.js').read_text(encoding='utf-8')
+          assert template.count('__RELEASE__') == 1 and template.count('__RESOURCES__') == 1
+          output=template.replace('__RELEASE__',json.dumps(release)).replace('__RESOURCES__',json.dumps(assets,ensure_ascii=False,indent=2))
+          (root/'sw.js').write_text(output,encoding='utf-8')
+          print('Updated signed shell:',len(assets),'resources,',release)
+          PY
+      - name: Commit cache update without touching catalog or photographs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sw.js
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh SdM offline cache and prevent old FORMA HOME shell"
+            git push origin HEAD:main
+          fi
