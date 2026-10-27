@@ -23,12 +23,15 @@ jobs:
           import hashlib, json, re
           from pathlib import Path
           root = Path('.')
-          release = '20261026-sdm-demo-static-v2'
+          release = '20261027-sdm-demo-note-v3'
           html = (root/'index.html').read_text(encoding='utf-8')
           css = (root/'storefront.css').read_text(encoding='utf-8')
           media = (root/'media-policy.js').read_text(encoding='utf-8')
           assert '<title>SdM' in html
           assert 'SdM / СдМ' in html
+          assert 'Демонстрационная версия сайта' in html
+          assert 'на основе материалов Secret de Maison' in html
+          assert 'demo-context-heading' in css
           assert 'site-loader-brand">SDM' in media
           assert 'site-loader{animation:none!important;transition:none!important;' in css
           script_urls = re.findall(r'<script src="([^"]+\.js(?:\?[^"]*)?)"', html)

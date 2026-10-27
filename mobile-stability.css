@@ -119,3 +119,36 @@ html body #productDialog>.dialog-close {
     background-attachment:scroll!important;
   }
 }
+
+/* Demonstration concept notice: legible, understated and responsive. */
+html body .demo-context{
+  box-sizing:border-box;
+  width:100%;
+  margin:0;
+  padding:14px 20px 16px;
+  background:#ECECEA;
+  border-bottom:1px solid #D8D8D5;
+  color:#292B2D;
+  text-align:center;
+}
+html body .demo-context p{margin:0;}
+html body .demo-context-heading{
+  font:650 clamp(14px,1.3vw,16px)/1.35 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  letter-spacing:.008em;
+}
+html body .demo-context-subheading{
+  padding-top:4px;
+  font:500 clamp(13px,1.15vw,14px)/1.4 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color:#3D4246;
+}
+html body .demo-context-source{
+  padding-top:4px;
+  font:400 clamp(12px,1.05vw,13px)/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color:#626568;
+}
+@media(max-width:640px){
+  html body .demo-context{padding:13px 16px 14px;}
+  html body .demo-context-heading{font-size:14px;}
+  html body .demo-context-subheading{font-size:13px;}
+  html body .demo-context-source{font-size:12px;}
+}
