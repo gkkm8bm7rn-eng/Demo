@@ -1,15 +1,15 @@
 /* Generated with build-release.py. Cache ownership is the full registration
    scope, never a shared origin-wide prefix. */
-const SHELL_VERSION="20261026-sdm-demo-static-v2";
+const SHELL_VERSION="20261027-sdm-demo-note-v3";
 const RESOURCES=[
   {
-    "url": "index.html?release=20261026-sdm-demo-static-v2",
-    "sha256": "4407f4cee1e7ff43f04e763038c50b9e6fad0014dcefe35745b0eeac149344a0",
+    "url": "index.html?release=20261027-sdm-demo-note-v3",
+    "sha256": "ad2b96f94399288485816c1f87e76ab3426ecfd3c3a4a246331442a1da7ea50d",
     "key": "index.html"
   },
   {
     "url": "storefront.css?v=20261026-sdm-brand-v1",
-    "sha256": "af0a7b8d7a3383f9444cdf5d086ba05ecdf99328c50b548949b11c8024b2cd5c"
+    "sha256": "df21109835ee008fc93b1cc8666e29c493374f6d6a12793cde0ebbffd76ed296"
   },
   {
     "url": "media-policy.js?v=20261026-sdm-brand-v1",
