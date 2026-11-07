@@ -1,4 +1,4 @@
-/* SdM public demo retired. No catalog requests or offline catalog shell. */
+/* Retired demo: remove old offline data and unregister. */
 self.addEventListener('install', event => {
   event.waitUntil(self.skipWaiting());
 });
